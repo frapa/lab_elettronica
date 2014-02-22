@@ -1,2 +1,2 @@
-lab_elettronica
+Lab di Elettronica
 ===============
