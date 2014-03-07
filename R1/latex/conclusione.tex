@@ -1,9 +1,30 @@
 \section*{Conclusione}
 
-Analizzando i dati tabuati relativi alla misura di resistenza si può notare che per misurare valori piccoli di resistenze sembra essere più preciso il circuito con configurazione a monte, mentre per misure di resistenze di grande valore risulta più accurato il circuito con amperometro a valle.
+Analizzando i dati graficati in Figura \ref{fig:culo} relativi alla misura di resistenza si può notare che per misurare valori piccoli di resistenze sembra essere più preciso il circuito con configurazione a monte, mentre per misure di resistenze di grande valore risulta più accurato il circuito con amperometro a valle.
 Evidentemente la configurazione con amperometro a valle è imprecisa nella misura di resistenze ``piccole'' poichè la resistenza interna dell'amperometro è confrontabile con quella da misurare.
 
-Come si può osservare dall'andamento del grafico relativo alla resistenza della lampadina, questo non presenta un'andamento lineare.
+Questi risultati sono ancora più evidenti se si osserva la seguente tabella che riporta i valori delle resistenze per i circuiti risolti, in entrambe le configurazioni. 
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{l | c c}
+      \multicolumn{3}{c}{\textbf{$Resistenze [\Omega]$}} \\
+      \toprule
+      $Valori `veri'$ & $Monte$ & $Valle$ \\
+      \midrule
+      983k   & 1000k $\pm$ 30k & 1000k $\pm$ 20k \\
+      99.83k & 98.0k $\pm$ 1.7k & 99.4k $\pm$ 1.6k \\
+      9.937k & 10100 $\pm$ 170 & 99400 $\pm$ 160 \\
+      999    & 1010 $\pm$ 20 & 1000 $\pm$ 20 \\
+      98.88  & 99 $\pm$ 2 & 99 $\pm$ 2 \\
+      9.97   & 10.3 $\pm$ 0.3 & 5.3 $\pm$ 0.3 \\
+      1.04   & 0.95 $\pm$ 0.06 & 1.71 $\pm$ 0.08 \\
+      \bottomrule
+  \end{tabular}
+  \caption{In questa tabella, come anticipato, sono riportati i valori delle resistenze vere, misurate mediante il multimetro, e quelli ricavati risolvendo i due circuiti a nostra disposizione. Come si vede chiaramente per resistenze con valore elevato abbiamo che la configurazione con amperometro a valle risulta essere più precisa di quella a monte. Il discorso è analogo se si considera la confuigurazione a monte, che risulta essere migliore per misurare resistenze piccole.}
+\end{table}
+
+Infine come si può osservare dall'andamento del grafico (Figura \ref{fig:lampadina}) relativo alla resistenza della lampadina, questo non presenta un'andamento lineare.
 Questo fatto è particolarmente evidente sia per valori bassi di corrente elettrica sia dal fatto che l'intercetta del grafico non passa per l'origine.
 
 Questo risultato era prevedibile dal momento che la resistenza in esame non è un componente Ohmico e quindi non segue la legge di Ohm.
