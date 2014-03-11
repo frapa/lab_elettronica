@@ -26,7 +26,20 @@ dove in entrambe le equazioni $V\ped{0}$ indica la differenza di potenziale in u
 
 Quindi nella seguente tabella sono riportati i valori del tempo caratteristico ricavato teoricamente ($\tau\ped{teo}$) risolvendo l'equazione (\ref{eq:tau}), e quello ricavato dalla lettura del multimetro ($\tau\ped{exp}$).
 
-TABELLA
+\begin{SCtable}[0.5][H]
+  \centering
+  \begin{tabular}{l | c c c}
+      \multicolumn{4}{c}{\textbf{Tempo caratteristico $(\tau)$}} \\
+      \toprule
+      Resistenza $[\si{\ohm}]$ & Capacità $[\si{\farad}]$ & $\tau\ped{exp} [\si{\second}]$ & $\tau\ped{teo} [\si{\second}]$ \\
+      \midrule
+      499k   &  $5.00\,10^{-9}$ 	& $2.40\,10^{-3}$ 	& $2.498\,10^{-3}$ \\
+      19.9k  &  $0.99\,10^{-6}$ 	& $2.08\,10^{-3}$ 	& $1.980\,10^{-3}$ \\
+      997    &  $99.3\,10^{-9}$ 	& $1.04\,10^{-3}$ 	& $0.987\,10^{-3}$ \\
+      \bottomrule
+  \end{tabular}
+  \caption{In questa tabella, come anticipato, sono riportati i valori delle resistenze vere, misurate mediante il multimetro, e quelli ricavati risolvendo i due circuiti a nostra disposizione. Come si vede chiaramente per resistenze con valore elevato abbiamo che la configurazione con amperometro a valle risulta essere più precisa di quella a monte. Il discorso è analogo se si considera la confuigurazione a monte, che risulta essere migliore per misurare resistenze piccole.}
+\end{SCtable}
 
 Infine abbiamo calcolato il valore della capacità, a priori incognita, di un condensatore. Questo è stato fatto risolvendo la semplice equazione:
 
