@@ -33,12 +33,12 @@ Quindi nella seguente tabella sono riportati i valori del tempo caratteristico r
       \toprule
       Resistenza $[\si{\ohm}]$ & Capacità $[\si{\farad}]$ & $\tau\ped{exp} [\si{\second}]$ & $\tau\ped{teo} [\si{\second}]$ \\
       \midrule
-      499k   &  $5.00\,10^{-9}$ 	& $2.40\,10^{-3}$ 	& $2.498\,10^{-3}$ \\
-      19.9k  &  $0.99\,10^{-6}$ 	& $2.08\,10^{-3}$ 	& $1.980\,10^{-3}$ \\
-      997    &  $99.3\,10^{-9}$ 	& $1.04\,10^{-3}$ 	& $0.987\,10^{-3}$ \\
+      499k   &  $5.00\times10^{-9}$ 	& $(2.40\,\pm\,0.1)\cdot10^{-3}$ 	& $2.498\cdot10^{-3}$ \\
+      19.9k  &  $0.99\cdot10^{-6}$ 	& $ (2.08\,\pm\,0.1)\times10^{-3}$ 	& $1.980\cdot10^{-3}$ \\
+      997    &  $99.3\cdot10^{-9}$ 	& $ (1.04\,\pm\,0.1)\times10^{-3}$ 	& $0.987\times10^{-3}$ \\
       \bottomrule
   \end{tabular}
-  \caption{In questa tabella sono riportati i valori del tempo caratteristico sia teorico $\tau\ped{teo}$ che sperimentale $\tau\ped{exp}$ in base ai vari valori di resistenze e capacità presenti nel nostro circuito.}
+  \caption{In questa tabella sono riportati i valori del tempo caratteristico sia teorico $\tau\ped{teo}$ che sperimentale $\tau\ped{exp}$ in base ai vari valori di resistenze e capacità presenti nel nostro circuito. ([$\times$]: Ho vinto!!! [$\cdot$]: gneeeee!)}
 \end{table}
 
 Infine abbiamo calcolato il valore della capacità, a priori incognita, di un condensatore. Questo è stato fatto risolvendo la semplice equazione:
@@ -47,4 +47,11 @@ Infine abbiamo calcolato il valore della capacità, a priori incognita, di un co
 	C \,=\, \frac{\tau}{R}
 \end{equation}
 %
-dove i valori di $R$ e $\tau$ sono noti in quanto la resistenza è stata impostata a piacere e il tempo carateristico acquisito sperimentalmente grazie all'oscilloscopio.
+dove i valori di $R$ e $\tau$ sono noti in quanto la resistenza è stata impostata a piacere e il tempo caratteristico acquisito sperimentalmente grazie all'oscilloscopio.
+
+\begin{SCfigure}[1][h]
+    \includegraphics[width=140mm]{fig.pdf}
+    \caption{La linea tratteggiata mostra l'andamento della tensione erogata dal generatore d'onde, mentre la linea continua
+      rappresenta la tensione ai capi di uno dei condensatori in esame. È stata disegnata una linea punteggiata verticale che mostra il
+      valore del tempo tipico del circuito RC.}
+\end{SCfigure}
