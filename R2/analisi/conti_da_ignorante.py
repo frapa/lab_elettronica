@@ -5,8 +5,10 @@ import numpy as np
 
 R = np.array((19943, 997, 499550))
 dR = np.array((19943, 997, 499550)) * 0.05
+print(R, dR)
 C = np.array((99.3e-9, 990e-9, 5e-9))
 dC = np.array((99.3e-9, 990e-9, 5e-9)) * 0.05
+print(C, dC)
 
 T = R * C
 dT = np.sqrt((dR * C)**2 + (R * dC)**2)
