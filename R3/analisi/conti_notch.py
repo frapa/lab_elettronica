@@ -14,19 +14,27 @@ b_vout = basso[:,1]
 b_ph = -basso[:,2]
 b_freq = basso[:,3]
 
+db_vin = basso[:,0] * 0.01
+db_vout = basso[:,1] * 0.01
+db_ph = -basso[:,2] * 0.01
+db_freq = basso[:,3] * 0.01
+
 R = 1000
+dR = R * 0.01
 L = 0.01
+dL = L * 0.01
 C = 25e-9
+dC = C * 0.01
 taglio = 1/(2*pi*sqrt(C*L))
-print(taglio)
-F = 0.01
+dtaglio = sqrt((1/(4*pi)*(C*L)**-1.5)**2 * (L**2*dC**2 + C**2*dL**2)) 
+print(taglio, "±", dtaglio)
 
 b_dB = 20 * np.log10(b_vout / b_vin)
+db_dB = 20 / np.log(10) * np.sqrt((db_vout/b_vout)**2 + (db_vin/b_vin)**2)
 
 f = np.logspace(2, 8, num=500)
 w = 2*pi*f
 I = w*C / (R*w*C + 1j*(w**2*L*C - 1))
-I = 
 V = 1 - R*I
 out = abs(V)
 phase = np.vectorize(cmath.phase)
@@ -35,13 +43,13 @@ ph = phase(V) * 180 / pi
 t_dB = 20 * np.log10(out)
 #print(t_vout)
 
+F = 2.1e-10
 Icorr = w*C / (R*w*C + 1j*(w**2*L*C + w**2*F*C - 1))
-Vcorr = 1 - R*Icorr - Icorr*1j*w*F
+Icorr = 1 / (R - 1j/(w*C) - 1j*(w*L) / (w**2 * L * F - 1))
+Vcorr = 1 - R*Icorr
 out_corr = abs(Vcorr)
 ph_corr = phase(Vcorr) * 180 / pi
 t_dB_corr = 20 * np.log10(out_corr)
-
-t_dB_corr2 = 20 * np.log10(abs((w*L - 1/(w*C)) / (R**2 + w*(L + F) - 1/(w*C))**0.5))
 
 matplotlib.rcParams['font.size'] = 15
 ### PASSA-BASSO
@@ -53,16 +61,20 @@ f1.suptitle("Filtro a reiezione di banda",
 
 # GRAFICO 1
 ax1 = f1.add_subplot(2, 1, 1)
+
+ax1.plot((taglio, taglio), (-32, 2), color="black", linewidth=2)
+
 # crea plot con le barre d'errore (o anche senza)
 line = ax1.errorbar(x=f, y=t_dB,
     #yerr=dy, #xerr=,
-    fmt='-', c='gray', linewidth=2)
+    fmt='-', c='gray', linewidth=3)
 line_corr = ax1.errorbar(x=f, y=t_dB_corr,
     #yerr=dy, #xerr=,
-    fmt='-', c='blue', linewidth=2)
+    fmt='--', c='black', linewidth=2)
 dots1 = ax1.errorbar(x=b_freq, y=b_dB,
-    #yerr=dy, #xerr=,
-    fmt='o', c="black", linewidth=2)
+    yerr=db_dB, #xerr=,
+    fmt='o', c="white", linewidth=2,
+    markersize=7, markeredgewidth=1)
     
 #ax1.set_xlabel(u'Frequenza [Hz]',
 #    labelpad=12, fontsize=14)
@@ -81,20 +93,23 @@ for label in ax1.get_xaxis().get_majorticklabels():
 #ax1.legend((dots1, line), ("Tensione ai capi", "Tensione fornita"), 'lower right',
 #    prop={'size': 12})
 
-ax1.plot((taglio, taglio), (-32, 2), color="black", linewidth=2)
-
 # GRAFICO 2
 ax2 = f1.add_subplot(2, 1, 2)
+
+ax2.plot((taglio, taglio), (-90, 90), color="black", linewidth=2)
+ax2.text(taglio * 0.9, 93.5, "ν₀ = 10100 ± 100")
+
 # crea plot con le barre d'errore (o anche senza)
 line2 = ax2.errorbar(x=f, y=ph,
     #yerr=dy, #xerr=,
-    fmt='-', c='gray', linewidth=2)
+    fmt='-', c='gray', linewidth=3)
 line2_corr = ax2.errorbar(x=f, y=ph_corr,
     #yerr=dy, #xerr=,
-    fmt='-', c='blue', linewidth=2)
+    fmt='--', c='black', linewidth=2)
 dots2 = ax2.errorbar(x=b_freq, y=b_ph,
     #yerr=dy, #xerr=,
-    fmt='o', c='black', linewidth=2)
+    fmt='o', c='white', linewidth=2,
+    markersize=7, markeredgewidth=1)
     
 ax2.set_xlabel(u'Frequenza [Hz]',
     labelpad=12, fontsize=16)
@@ -108,11 +123,8 @@ ax2.set_ylim((-90, 90))
 ax2.set_xlim((400, 20e6))
 ax2.set_yticks((-80, -60, -40, -20, 0, 20, 40, 60, 80))
 # questo produce una legenda
-ax2.legend((dots1, line), ("Punti sperimentali", "Previsione teorica"), 'upper right',
+ax2.legend((dots1, line, line_corr), ("Punti sperimentali", "Previsione teorica", "Correzione"), 'upper right',
     prop={'size': 15})
-
-ax2.plot((taglio, taglio), (-90, 90), color="black", linewidth=2)
-ax2.text(taglio * 0.98, 94, "ν₀", size="large")
 
 # questo imposta i bordi del grafico
 f1.subplots_adjust(left=0.12, right=0.97,

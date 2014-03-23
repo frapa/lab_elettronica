@@ -31,6 +31,8 @@ phase = np.vectorize(cmath.phase)
 ph = phase(V) * 180 / pi
 #t_vout = w * L * ((w*L)**2 + R**2 + w**4*C**2 - 2*(w*R)**2*C)**0.5 / (R**2*(1 - w**2*L*C)**2 + (w*L)**2)
 t_dB = 20 * np.log10(out)
+print(f[35], f[30], f[35] - f[30])
+print(taglio / (f[35] - f[30]))
 #print(t_vout)
 
 matplotlib.rcParams['font.size'] = 15
@@ -96,7 +98,7 @@ ax2.legend((dots1, line), ("Punti sperimentali", "Previsione teorica"), 'upper r
     prop={'size': 15})
 
 ax2.plot((taglio, taglio), (-90, 90), color="black", linewidth=2)
-ax2.text(taglio * 0.98, 94, "ν₀", size="large")
+ax2.text(taglio * 0.95, 93.5, "ν₀ = 10100 ± 100")
 
 # questo imposta i bordi del grafico
 f1.subplots_adjust(left=0.12, right=0.97,

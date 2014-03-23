@@ -31,7 +31,17 @@ In questo modo potremo studiare la funzione di trasferimento del filtro al varia
 
 I dati ottenuti sono riportati nei seguenti grafici:
 
-[GRAFICO]
+\begin{SCfigure}
+  \includegraphics[scale=0.55]{passa_basso.pdf}
+  \caption{I grafici riportano l'attenuazione e lo sfasamento tra input e output di un filtro passa-basso.
+    Le curve grigie sono gli andamenti teorici, che sono molto bene seguiti dai dati sperimentali. Abbiamo
+    scelto, come valore della frequenza di taglio, 800 Hz poiché avevamo a disposizione le capacità
+    e resistenze adatte. In questo tipo di semplici filtri si ha un attenuazione, a frequenze più alte della
+    frequenza ti taglio, che è di circa -20 dB/decade, o -6 dB/ottava. L'attenuazione risulta seguire questa
+    ``regola'' dai nostri dati sperimentali. Inoltre si vede che a una decade di distanza dalla frequenza di taglio,
+    lo sfasamento dista di meno di $6^\circ$ dai valori massimi e minimi, altra caratteristica tipica dei filtri RC.}
+  \label{fig:g_basso}
+\end{SCfigure}
 
 \subsection*{Filtro Passa-Banda}
 
@@ -62,15 +72,42 @@ Quindi anche in questo caso raccoglindo, mediante l'oscilloscopio, una serie di 
 
 I risultati da noi ottenuti sono riportati nei grafici seguenti:
 
-\begin{figure}
-  \includegraphics[scale=0.5]{passa_banda.pdf}
-\end{figure}
+\begin{SCfigure}
+  \includegraphics[scale=0.55]{passa_banda.pdf}
+  \caption{Il primo grafico illustra l'attenuazione del segnale in funzione della frequenza del segnale stesso
+    per un filtro passa-banda.
+    Il secondo riporta lo sfasamento tra input e output, sempre in funzione della frequenza. La linea grigia indica
+    gli andamenti delle due grandezze previsti dai calcoli. Il fattore di qualità vale
+    $Q = \nu_0/\Delta \nu\ped{3dB} \simeq 1.4$ per il nostro filtro. I dati seguono bene la predizione teorica,
+    unico neo i dati di sfasamento per basse frequenze. Questi dati comunque non devono essere presi troppo sul serio
+    poichè il valore riportato variava in continuazione sullo schermo dell'oscilloscopio. Le incertezze sono dell'ordine
+    di grandezza dei punti ($\simeq 1\%$), a parte i punti sopra citati, per i quali non abbiamo una stima certa,
+    ma possiamo ipotizzare un 5\%.}
+  \label{fig:g_banda}
+\end{SCfigure}
 
 \subsection*{Filtro a Reiezione di Banda}
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+  \includegraphics[width=0.38\textwidth]{s_corr.pdf}
+  \caption{Circuito corretto.}
+  \label{fig:corr}
+\end{wrapfigure}
 
 Per ottenere un filtro a Reiezione di banda, illustrato in figura XXX, abbiamo montato un circuito $R\,C\,L$ con una resistenza in serie ad un'induttanza ed un condensatore.
 Questo filtro non è altro che l'opposo del filtro Passa-banda ovvero, nota la frequenza di risonanza ($\nu\ped{r}$), il filtro impedisce la trasmissione delle frequenze appartenenti all'intervallo centrato su $\nu\ped{r}$. L'analisi che viene fatta per questo circuito è del tutto analoga a quella illustrata per il filtro Passa-banda, come anche i valori di capacità, induttanza e frequenza di risonanza esposti nella sezione precedente.
 
-Pertanto i risultati ottenuti per questo circuito $R\,C\,L$ sono riportati nei seguenti grafici:
-
-[GRAFICO]
+\begin{SCfigure}
+  \includegraphics[scale=0.55]{notch.pdf}
+  \caption{In questo caso abbiamo
+    misurato la risposta del filtro fino a frequenze di 15 Mhz. La predizione teorica, indicata dalla linea
+    continua grigia, è in accordo con i dati fino a circa 100 kHz ed in seguito si discosta significativamente
+    dal funzionamento reale del filtro. Questo è dovuto al fatto che ad alte frequenze la resistenza dei cavi
+    di collegamento inizia a diventare non trascurabile, e insorgono capacità ed induttanze parassite. La linea
+    tratteggiata indica una correzione teorica ottenuta considerando una capacità parassita
+    $F = 2.1 \times 10^{-10} \si{\farad}$ in parallelo all'induttore, come mostrato in Figura \ref{fig:corr}.
+    L'introduzione della correzione spiega molto meglio i dati ottenuti dopo i 100 kHz. Attorno ai 10 Mhz anche la
+    correzione inizia a non essere molto aderente alla realtà, a causa del fatto che anche l'effetto delle resistenze
+    ed induttanze parassite inizia a farsi sentire.}
+  \label{fig:g_notch}
+\end{SCfigure}
