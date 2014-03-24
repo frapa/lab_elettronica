@@ -43,13 +43,17 @@ f1.suptitle("Filtro passa-basso",
 
 # GRAFICO 1
 ax1 = f1.add_subplot(2, 1, 1)
+
+ax1.plot((796, 796), (-30, 2), color="black", linewidth=2)
+
 # crea plot con le barre d'errore (o anche senza)
 line = ax1.errorbar(x=f, y=t_dB,
     #yerr=dy, #xerr=,
-    fmt='-', c='gray', linewidth=2)
+    fmt='-', c='gray', linewidth=3)
 dots1 = ax1.errorbar(x=b_freq, y=b_dB,
     #yerr=dy, #xerr=,
-    fmt='o', c='black', linewidth=2)
+    fmt='o', c="white", linewidth=2,
+    markersize=7, markeredgewidth=1)
     
 #ax1.set_xlabel(u'Frequenza [Hz]',
 #    labelpad=12, fontsize=14)
@@ -68,17 +72,20 @@ ax1.set_yticklabels(("", -25, -20, -15, -10, -5, 0))
 #ax1.legend((dots1, line), ("Tensione ai capi", "Tensione fornita"), 'lower right',
 #    prop={'size': 12})
 
-ax1.plot((796, 796), (-30, 2), color="black", linewidth=2)
 
 # GRAFICO 2
 ax2 = f1.add_subplot(2, 1, 2)
+
+ax2.plot((796, 796), (-90, 0), color="black", linewidth=2)
+
 # crea plot con le barre d'errore (o anche senza)
 line2 = ax2.errorbar(x=f, y=ph,
     #yerr=dy, #xerr=,
-    fmt='-', c='gray', linewidth=2)
+    fmt='-', c='gray', linewidth=3)
 dots2 = ax2.errorbar(x=b_freq, y=b_ph,
     #yerr=dy, #xerr=,
-    fmt='o', c='black', linewidth=2)
+    fmt='o', c="white", linewidth=2,
+    markersize=7, markeredgewidth=1)
     
 ax2.set_xlabel(u'Frequenza [Hz]',
     labelpad=12, fontsize=16)
@@ -94,8 +101,7 @@ ax2.set_xlim((40, 30000))
 # questo produce una legenda
 ax2.legend((dots1, line,), ("Punti sperimentali", "Previsione teorica"), 'upper right',
     prop={'size': 15})
-
-ax2.plot((796, 796), (-90, 0), color="black", linewidth=2)
+    
 ax2.text(740, 2, "ν₀ = 800 ± 10")
 
 # questo imposta i bordi del grafico
