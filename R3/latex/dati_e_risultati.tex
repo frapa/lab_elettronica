@@ -2,7 +2,7 @@
 
 \subsection*{Filtro Passa-Basso}
 
-Per ottenere un filtro Passa-basso, illustrato in figura XXX, abbiamo montato un circuito $R\,C$ con una resistenza in serie ad un condensatore.
+Per ottenere un filtro Passa-basso, illustrato in Figura \ref{fig:basso}, abbiamo montato un circuito $R\,C$ con una resistenza in serie ad un condensatore.
 La caratteristica di tale filtro è quella di permettere il passaggio di tutte le frequenze che spaziano tra i $0\,\si{\hertz}$ fino alla frequenza di taglio ($\nu\ped{0}$), caratteristica propria del circuito determinata dai componenti dello stesso.
 In questa prima parte ci interessa verificare pertanto che tale circuito si comporti effettivamente come un filtro passa-basso.
 
@@ -17,13 +17,13 @@ Pertanto conoscendo la relazione che sussiste tra la frequenza di taglio ($\nu\p
 possiamo determinare il valore della frequenza di taglio imponendo un valore di resistenza e capacità a piacere. I valori stabiliti sono i seguenti:
 
 \begin{equation*}
-	\text{Frequenza di taglio:} \quad \nu\ped{0} \,=\,
+	\text{Frequenza di taglio:} \quad \nu\ped{0} \,=\, 795 \,\pm\, 11 \,\, \si{\hertz}
 \end{equation*}
 \begin{equation*}
-	\text{Resistenza:} \quad R \,=\,
+	\text{Resistenza:} \quad R \,=\, 1000 \,\pm\, 10 \,\, \si{\ohm}
 \end{equation*}
 \begin{equation*}
-	\text{Capacità:} \quad C \,=\,
+	\text{Capacità:} \quad C \,=\, 200 \,\pm\, 2 \,\, \si{\nano\farad} 
 \end{equation*}
 
 Quindi una volta realizzato il circuito e note le sue caratteristiche abbiamo raccolto una serie di valori relativi alla tensione in ingresso al circuito ($V\ped{in}$), la tensione ai capi del condensatore ($V\ped{out}$) e la frequenza del segnale in uscita ($\nu\ped{out}$).
@@ -44,7 +44,7 @@ In questo modo potremo studiare la funzione di trasferimento del filtro al varia
 \subsection*{Filtro Passa-Banda}
 
 
-Per ottenere un filtro Passa-banda, illustrato in figura XXX, abbiamo montato un circuito $R\,C\,L$ con una resistenza in serie al parallelo tra un'induttanza ed un condensatore.
+Per ottenere un filtro Passa-banda, illustrato in Figura \ref{fig:banda}, abbiamo montato un circuito $R\,C\,L$ con una resistenza in serie al parallelo tra un'induttanza ed un condensatore.
 La caratteristica di tale filtro è quella di permettere il passaggio di frequenze che appartengono solo ad un determinato intervalo centrato intorno alla frequenza di risonanza ($\nu\ped{r}$), mentre atenua tutte quelle non appartenenti ad esso.
 In questo caso a noi interessa ricavare, stabilita una certa frequenza di risonanza, l'intervallo di frequenze che vengono trasmesse e verificare pertato che tale circuito sia una buona approssimazione di un filtro passa-banda.
 
@@ -66,9 +66,9 @@ Poiche conosciamo la relazione che lega la frequenza di risonanza ($\nu\ped{r}$)
 possiamo determinare il valore della frequnza di risonanza scegliendo a piacere i valori di induttanza e capacità. Pertanto la nostra scelta è stata la seguente:
 
 \begin{align*}
-	\text{Frequenza di risonanza:} \quad \nu\ped{r} \,=\, \\
-	\text{Induttanza:} \quad L \,=\, \\
-	\text{Capacità:} \quad C \,=\, \\
+	\text{Frequenza di risonanza:} \quad \nu\ped{r} \,=\, 10065 \,\pm\, 5 \, \si{\hertz} \\
+	\text{Induttanza:} \quad L \,=\, (1.00 \,\pm\, 0.01)\cdot\,10^{-2} \, \si{\farad} \\
+	\text{Capacità:} \quad C \,=\, 25 \,\pm\, 0.25 \, \si{\nano\farad} \\
 \end{align*}
 
 Quindi anche in questo caso raccoglindo, mediante l'oscilloscopio, una serie di valori relativi alla tensione in ingresso al circuito ($V\ped{in}$), la tensione ai capi del condensatore ($V\ped{out}$) e la frequenza del segnale in uscita ($\nu\ped{out}$), possiamo studiare la funzione di trasferimento del segnale al variare della frequanza in ingresso ($\nu\ped{in}$) al circuito.
@@ -97,7 +97,7 @@ Quindi anche in questo caso raccoglindo, mediante l'oscilloscopio, una serie di 
   \label{fig:corr}
 \end{wrapfigure}
 
-Per ottenere un filtro a Reiezione di banda, illustrato in figura XXX, abbiamo montato un circuito $R\,C\,L$ con una resistenza in serie ad un'induttanza ed un condensatore.
+Per ottenere un filtro a Reiezione di banda, illustrato in Figura \ref{fig:notch}, abbiamo montato un circuito $R\,C\,L$ con una resistenza in serie ad un'induttanza ed un condensatore.
 Questo filtro non è altro che l'opposo del filtro Passa-banda ovvero, nota la frequenza di risonanza ($\nu\ped{r}$), il filtro impedisce la trasmissione delle frequenze appartenenti all'intervallo centrato su $\nu\ped{r}$. L'analisi che viene fatta per questo circuito è del tutto analoga a quella illustrata per il filtro Passa-banda, come anche i valori di capacità, induttanza e frequenza di risonanza esposti nella sezione precedente.
 
 \begin{SCfigure}

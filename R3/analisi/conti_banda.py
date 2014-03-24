@@ -15,10 +15,15 @@ b_ph = -basso[:,2]
 b_freq = basso[:,3]
 
 R = 1000
+dR = 10
 L = 0.01
+dL = 0.0001
 C = 25e-9
+dC = C * 0.01
 taglio = 1/(2*pi*sqrt(C*L))
+dtaglio = sqrt((1/(4*pi)*(C*L)**-1)**2 * (C*dL**2 + L*dC**2)) 
 print(taglio)
+print(dtaglio)
 G = 10
 
 b_dB = 20 * np.log10(b_vout / b_vin)

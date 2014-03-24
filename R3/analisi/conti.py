@@ -19,7 +19,7 @@ dR = 10
 C = 200e-9
 dC = C * 0.01
 taglio = 1/(2*pi*R*C)
-dtaglio = sqrt((1/(2*pi)*(R*C)**-2)**2 * (C**2*dR**2 + R**2*dC**2)) 
+dtaglio = sqrt((1/(2*pi)*(R*C)**-2)**2 * (C**2*dR**2 + R**2*dC**2))
 print(taglio, "±", dtaglio)
 
 b_dB = 20 * np.log10(b_vout / b_vin)
