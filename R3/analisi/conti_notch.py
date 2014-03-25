@@ -44,8 +44,10 @@ t_dB = 20 * np.log10(out)
 #print(t_vout)
 
 F = 2.1e-10
+G = 10
 Icorr = w*C / (R*w*C + 1j*(w**2*L*C + w**2*F*C - 1))
 Icorr = 1 / (R - 1j/(w*C) - 1j*(w*L) / (w**2 * L * F - 1))
+Icorr = 1 / (R - 1j/(w*C) + ((G + 1j*w*L)**-1 + (-1j*(w*F)**-1)**-1)**-1)
 Vcorr = 1 - R*Icorr
 out_corr = abs(Vcorr)
 ph_corr = phase(Vcorr) * 180 / pi

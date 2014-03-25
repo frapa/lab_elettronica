@@ -16,15 +16,11 @@ Pertanto conoscendo la relazione che sussiste tra la frequenza di taglio ($\nu\p
 %
 possiamo determinare il valore della frequenza di taglio imponendo un valore di resistenza e capacità a piacere. I valori stabiliti sono i seguenti:
 
-\begin{equation*}
-	\text{Frequenza di taglio:} \quad \nu\ped{0} \,=\, 795 \,\pm\, 11 \,\, \si{\hertz}
-\end{equation*}
-\begin{equation*}
-	\text{Resistenza:} \quad R \,=\, 1000 \,\pm\, 10 \,\, \si{\ohm}
-\end{equation*}
-\begin{equation*}
-	\text{Capacità:} \quad C \,=\, 200 \,\pm\, 2 \,\, \si{\nano\farad} 
-\end{equation*}
+\begin{align*}
+	\text{Frequenza di taglio:}& \quad \nu\ped{0} \,=\, 800 \,\pm\, 10 \,\, \si{\hertz} \\
+	\text{Resistenza:}& \quad R \,=\, 1000 \,\pm\, 10 \,\, \si{\ohm} \\
+	\text{Capacità:}& \quad C \,=\, 200 \,\pm\, 2 \,\, \si{\nano\farad} \\
+\end{align*}
 
 Quindi una volta realizzato il circuito e note le sue caratteristiche abbiamo raccolto una serie di valori relativi alla tensione in ingresso al circuito ($V\ped{in}$), la tensione ai capi del condensatore ($V\ped{out}$) e la frequenza del segnale in uscita ($\nu\ped{out}$).
 In questo modo potremo studiare la funzione di trasferimento del filtro al variare della frequanza in ingresso ($\nu\ped{in}$).
@@ -48,6 +44,22 @@ Per ottenere un filtro Passa-banda, illustrato in Figura \ref{fig:banda}, abbiam
 La caratteristica di tale filtro è quella di permettere il passaggio di frequenze che appartengono solo ad un determinato intervalo centrato intorno alla frequenza di risonanza ($\nu\ped{r}$), mentre atenua tutte quelle non appartenenti ad esso.
 In questo caso a noi interessa ricavare, stabilita una certa frequenza di risonanza, l'intervallo di frequenze che vengono trasmesse e verificare pertato che tale circuito sia una buona approssimazione di un filtro passa-banda.
 
+\begin{SCfigure}[1][t!]
+  \includegraphics[scale=0.55]{passa_banda.pdf}
+  \caption{Il primo grafico illustra l'attenuazione del segnale in funzione della frequenza del segnale stesso
+    per un filtro passa-banda.
+    Il secondo riporta lo sfasamento tra input e output, sempre in funzione della frequenza. La linea grigia indica
+    gli andamenti delle due grandezze previsti dai calcoli. Il fattore di qualità vale
+    $Q = \nu_0/\Delta \nu\ped{3dB} \simeq 1.4$ per il nostro filtro. I dati seguono bene la predizione teorica,
+    unico neo i dati di sfasamento per basse frequenze. Per comprendere questa discrepanza abbiamo considerato una
+    resistenza di valore $G = \SI{10}{\ohm}$ in serie all'induttanza, come mostrato in Figura \ref{fig:corr2},
+    poiché un induttore reale ha anche una resistenza. La curva tratteggiata illustra l'andamento previsto dopo aver introdotto la
+    correzione. Poichè tale curva segue molto bene i dati, possiamo concludere che la resistenza dell'induttore è
+    la ragione della differenza tra dati e teoria.
+    Le incertezze sono dell'ordine di grandezza dei punti ($\simeq 1\%$).}
+  \label{fig:g_banda}
+\end{SCfigure}
+
 Poiche conosciamo la relazione che lega la frequenza di risonanza ($\nu\ped{r}$) con l'induttanza ($L$) e la capacità ($C$):
 
 \begin{equation}
@@ -66,41 +78,16 @@ Poiche conosciamo la relazione che lega la frequenza di risonanza ($\nu\ped{r}$)
 possiamo determinare il valore della frequnza di risonanza scegliendo a piacere i valori di induttanza e capacità. Pertanto la nostra scelta è stata la seguente:
 
 \begin{align*}
-	\text{Frequenza di risonanza:} \quad \nu\ped{r} \,=\, 10065 \,\pm\, 5 \, \si{\hertz} \\
-	\text{Induttanza:} \quad L \,=\, (1.00 \,\pm\, 0.01)\cdot\,10^{-2} \, \si{\farad} \\
-	\text{Capacità:} \quad C \,=\, 25 \,\pm\, 0.25 \, \si{\nano\farad} \\
+	\text{Frequenza di risonanza:}& \quad \nu\ped{r} \,=\, 10100 \,\pm\, 100 \, \si{\hertz} \\
+	\text{Induttanza:}& \quad L \,=\, (1.00 \,\pm\, 0.01)\cdot\,10^{-2} \, \si{\farad} \\
+	\text{Capacità:}& \quad C \,=\, 25 \,\pm\, 0.25 \, \si{\nano\farad} \\
 \end{align*}
 
 Quindi anche in questo caso raccoglindo, mediante l'oscilloscopio, una serie di valori relativi alla tensione in ingresso al circuito ($V\ped{in}$), la tensione ai capi del condensatore ($V\ped{out}$) e la frequenza del segnale in uscita ($\nu\ped{out}$), possiamo studiare la funzione di trasferimento del segnale al variare della frequanza in ingresso ($\nu\ped{in}$) al circuito.
 
-\begin{SCfigure}
-  \includegraphics[scale=0.55]{passa_banda.pdf}
-  \caption{Il primo grafico illustra l'attenuazione del segnale in funzione della frequenza del segnale stesso
-    per un filtro passa-banda.
-    Il secondo riporta lo sfasamento tra input e output, sempre in funzione della frequenza. La linea grigia indica
-    gli andamenti delle due grandezze previsti dai calcoli. Il fattore di qualità vale
-    $Q = \nu_0/\Delta \nu\ped{3dB} \simeq 1.4$ per il nostro filtro. I dati seguono bene la predizione teorica,
-    unico neo i dati di sfasamento per basse frequenze. Per comprendere questa discrepanza abbiamo considerato una
-    resistenza di valore $G = \SI{10}{\ohm}$ in serie all'induttanza, come mostrato in Figura \ref{fig:corr2},
-    poiché un induttore reale ha anche una resistenza. La curva tratteggiata illustra l'andamento previsto dopo aver introdotto la
-    correzione. Poichè tale curva segue molto bene i dati, possiamo concludere che la resistenza dell'induttore è
-    la ragione della differenza tra dati e teoria.
-    Le incertezze sono dell'ordine di grandezza dei punti ($\simeq 1\%$).}
-  \label{fig:g_banda}
-\end{SCfigure}
-
 \subsection*{Filtro a Reiezione di Banda}
 
-\begin{wrapfigure}{r}{0.35\textwidth}
-  \includegraphics[width=0.33\textwidth]{s_corr.pdf}
-  \caption{Circuito corretto.}
-  \label{fig:corr}
-\end{wrapfigure}
-
-Per ottenere un filtro a Reiezione di banda, illustrato in Figura \ref{fig:notch}, abbiamo montato un circuito $R\,C\,L$ con una resistenza in serie ad un'induttanza ed un condensatore.
-Questo filtro non è altro che l'opposo del filtro Passa-banda ovvero, nota la frequenza di risonanza ($\nu\ped{r}$), il filtro impedisce la trasmissione delle frequenze appartenenti all'intervallo centrato su $\nu\ped{r}$. L'analisi che viene fatta per questo circuito è del tutto analoga a quella illustrata per il filtro Passa-banda, come anche i valori di capacità, induttanza e frequenza di risonanza esposti nella sezione precedente.
-
-\begin{SCfigure}
+\begin{SCfigure}[1][t!]
   \includegraphics[scale=0.55]{notch.pdf}
   \caption{In questo caso abbiamo
     misurato la risposta del filtro fino a frequenze di 15 Mhz. La predizione teorica, indicata dalla linea
@@ -114,3 +101,14 @@ Questo filtro non è altro che l'opposo del filtro Passa-banda ovvero, nota la f
     ed induttanze parassite inizia a farsi sentire.}
   \label{fig:g_notch}
 \end{SCfigure}
+
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \vspace{-1cm}
+  \includegraphics[width=0.33\textwidth]{s_corr.pdf}
+  \caption{Circuito corretto.}
+  \label{fig:corr}
+  \vspace{-1cm}
+\end{wrapfigure}
+
+Per ottenere un filtro a Reiezione di banda, illustrato in Figura \ref{fig:notch}, abbiamo montato un circuito $R\,C\,L$ con una resistenza in serie ad un'induttanza ed un condensatore.
+Questo filtro non è altro che l'opposo del filtro Passa-banda ovvero, nota la frequenza di risonanza ($\nu\ped{r}$), il filtro impedisce la trasmissione delle frequenze appartenenti all'intervallo centrato su $\nu\ped{r}$. L'analisi che viene fatta per questo circuito è del tutto analoga a quella illustrata per il filtro Passa-banda, come anche i valori di capacità, induttanza e frequenza di risonanza esposti nella sezione precedente.
