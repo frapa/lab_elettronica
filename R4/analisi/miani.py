@@ -48,6 +48,7 @@ print(( (dR3)*((R4*C4)/(R3**2)) )**2)
 print(( (dR4)*(C4/R3) )**2)
 print(( (dC4)*(R2/R1 - R4/R3))**2)
 
+print()
 
 C3_1 = 1/(w**2)*1/(R3*R4*C4)
 dC3_1 = sqrt( 
@@ -66,5 +67,6 @@ print()
 
 print(C3)
 print(dC3)
+print()
 print(C3_1)
 print(dC3_1)
