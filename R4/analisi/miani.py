@@ -49,6 +49,10 @@ print(( (dR4)*(C4/R3) )**2)
 print(( (dC4)*(R2/R1 - R4/R3))**2)
 
 print()
+### Questi valori rompono le palle!!! ###
+print( ((dR2)**2)*((C4/R1)**2) )
+
+print()
 
 C3_1 = 1/(w**2)*1/(R3*R4*C4)
 dC3_1 = sqrt( 
