@@ -1,20 +1,49 @@
 \section*{Dati e risultati}
 
-\subsection*{Determinazione capacità incognita}
+\subsection*{Determinazione della capacità incognita}
 
-In questa prima parte della relazione illustreremo come abbiamo trovato la capacità incognita ($C\ped{3}$) sfruttando le proprietà del circuito illustrato in Figura \ref{fig:notch}.
-Risolvendo questo tipo di circuito, nel caso in cui questo sia bilanciato, noi otteniamo i seguenti risultati:
+In questa prima parte della relazione illustreremo come abbiamo trovato la capacità incognita ($C_3$) sfruttando le proprietà del circuito rappresentato in Figura \ref{fig:notch}.
+Risolvendo questo tipo di circuito, nel caso in cui questo sia bilanciato, si ottengono i seguenti risultati:
 
-\begin{equation}
-	\frac{R_4}{R_3} \,+\, \frac{C_3}{C_4} \,=\, \frac{R_2}{R_1} \qquad \text{da cui si ottiene} \qquad C_3 \,=\, \Bigl(\frac{R_2}{R_1} \,-\, \frac{R_4}{R_3}\Bigr)\cdot\,C_4
-	\label{eq:C}
-\end{equation}
+%\begin{equation}
+%	\frac{R_4}{R_3} \,+\, \frac{C_3}{C_4} \,=\, \frac{R_2}{R_1} \qquad \text{da cui si ottiene} \qquad C_3 \,=\, %\Bigl(\frac{R_2}{R_1} \,-\, \frac{R_4}{R_3}\Bigr)\cdot\,C_4
+%	\label{eq:C}
+%\end{equation}
 \begin{equation}
 	\omega^2\,R_3\,R_4\,C_3\,C_4 \,=\, 1 \qquad \text{da cui si ottiene} \qquad C_3 \,=\, \frac{1}{\omega^2\,R_3\,R_4\,C_4}
 	\label{eq:C_imm}
 \end{equation}
-%
 
-In entrambe le equazioni $R_2,\,R_3,\,R_4$ sono i valori delle resistenze, $R_1$ è il valore della resistenza variabile, $C_4$ è il valore della capacità nota mentre $C_3$ quello della capacità incognita ed infine $\omega^2$ non è altro che il valore del periodo dell'impulso, ovvero $\omega \,=\, 2\,\pi\,\nu_0$ dove $\nu_0$ indica la frequenza in ingresso del nostro circuito.
+dove $R_3,\,R_4$ indicano le resistenze da $1\,\si{\kilo\ohm}$, $C_4$ è il valore della capacità nota ed infine $\omega$ non è altro che il valore del periodo dell'impulso, ovvero $\omega \,=\, 2\,\pi\,\nu_0$ dove $\nu_0$ indica la frequenza in ingresso del nostro circuito.
 
-Quindi l'operazione fondamentale da fare al fine di sfruttare le relazioni sopra citate è quella di bilanciare il circuito. Bilanciare il circuito non vuol dire altro che regolare i valori della frequenza in ingresso ($\nu_0$) e della resistenza variabile ($R_1$) in modo tale che la diffrenza di potenziale tra $V_1$ e $V_2$ sia nulla o quantomeno tendente a zero :D.
+Quindi l'operazione fondamentale da fare al fine di sfruttare la relazione sopra citata è quella di bilanciare il circuito. Bilanciare il circuito non vuol dire altro che regolare i valori della frequenza in ingresso ($\nu_0$) e della resistenza variabile ($R_1$) in modo tale che la diffrenza di potenziale tra $V_2$ e $V_1$ sia nulla o quantomeno tendente a zero :D.
+
+%I valori teorici $C\ped{3teo}$ da noi trovati, sfruttando le due formule precedenti (\ref{eq:C_imm}) e (\ref{eq:C_teo_imm}), per la capacità incognita sono i seguenti:  
+Il valore teorico $C\ped{3teo}$ da noi trovato per la capacità incognita è il seguente:
+
+%\begin{equation*}
+%	C\ped{3teo} \,=\, XXX \qquad \text{sfruttando la rezione (\ref{eq:C})}
+%\end{equation*}
+\begin{equation}
+	C\ped{3teo} \,=\, 2.9 \,\pm\, 0.2 \,\si{\nano\farad}  \qquad \text{sfruttando la rezione (\ref{eq:C_imm})}
+	\label{eq:C_teo_imm}
+\end{equation}
+%2.972638538603707e-09
+%2.1155093730419337e-10
+
+Mentre il valore sperimentale di $C\ped{3exp}$ ottenuto grazie alla misura diretta col multimetro digitale è:
+
+\begin{equation}
+	C\ped{3exp} \,=\, 3.0 \,\pm\, 0.2 \,\si{\nano\farad}
+	\label{eq:C_exp} 
+\end{equation}
+
+\subsection*{Ponte di Wien come filtro notch}
+
+In questa seconda sezione della relazione vogliamo scoprire se sia possibie utilizzare il ponte di Wien come filtro notch. A tal fine è necessario apportate alcune modifiche strutturali al nostro circuito. Tali cambiamenti sono illustrati in Figura XXX.
+
+Al fine di verificare se il nostro circuito sia approssimabile ad un filtro notch dobbiamo studiare la funzione di trasferimento del circuito ($\frac{V\ped{out}}{V\ped{in}}$) al variare della frequenza del segnale in entrata ($\nu_i$) mediante i diagrammi di Bode. Ricordiamo inoltre che la diffrenza di potenziale ai capi del nostro circuito ($V\ped{in}$) è rimasta costante per tutta la durata dell'esperienza. $V\ped{out}$ è il segnale in uscita dal nostro circuito.
+
+I dati da noi ottenuti sono riportati nei seguenti grafici:
+
+[GRAFICI]
