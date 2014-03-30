@@ -25,7 +25,7 @@ Il valore teorico $C\ped{3teo}$ da noi trovato per la capacità incognita è il 
 %	C\ped{3teo} \,=\, XXX \qquad \text{sfruttando la rezione (\ref{eq:C})}
 %\end{equation*}
 \begin{equation}
-	C\ped{3teo} \,=\, 2.9 \,\pm\, 0.2 \,\si{\nano\farad}  \qquad \text{sfruttando la rezione (\ref{eq:C_imm})}
+	C\ped{3teo} \,=\, 2.9 \,\pm\, 0.2 \,\si{\nano\farad}  \qquad \text{sfruttando la relzione (\ref{eq:C_imm})}
 	\label{eq:C_teo_imm}
 \end{equation}
 %2.972638538603707e-09
@@ -40,10 +40,33 @@ Mentre il valore sperimentale di $C\ped{3exp}$ ottenuto grazie alla misura diret
 
 \subsection*{Ponte di Wien come filtro notch}
 
-In questa seconda sezione della relazione vogliamo scoprire se sia possibie utilizzare il ponte di Wien come filtro notch. A tal fine è necessario apportate alcune modifiche strutturali al nostro circuito. Tali cambiamenti sono illustrati in Figura XXX.
+Vogliamo ora scoprire se sia possibie utilizzare il ponte di Wien come filtro notch. A tal fine è necessario apportate alcune modifiche strutturali al circuito. Tali cambiamenti sono illustrati in Figura \ref{fig:notch}.
 
-Al fine di verificare se il nostro circuito sia approssimabile ad un filtro notch dobbiamo studiare la funzione di trasferimento del circuito ($\frac{V\ped{out}}{V\ped{in}}$) al variare della frequenza del segnale in entrata ($\nu_i$) mediante i diagrammi di Bode. Ricordiamo inoltre che la diffrenza di potenziale ai capi del nostro circuito ($V\ped{in}$) è rimasta costante per tutta la durata dell'esperienza. $V\ped{out}$ è il segnale in uscita dal nostro circuito.
+Abbiamo studiato la funzione di trasferimento del circuito, cioè il rapporto $V\ped{out}/V\ped{in}$, sia dal punto di vista teorico che da quello sperimentale. Risolvendo il circuito si ottiene la $V\ped{out} = V_1 - V_2$, con relativa ampiezza e fase. Si è poi misurato, al variare della frequenza, l'ampiezza e la fase (rispetto a $V\ped{in}$) di $V\ped{out}$. O almeno avremmo dovuto misurare tale fase.
 
-I dati da noi ottenuti sono riportati nei seguenti grafici:
+Durante l'esecuzione dell'esperienza abbiamo però sbagliato, misurando l'ampiezza corretta, ma la fase di $V_1$ invece che quella di $V\ped{out}$. Per rimediare abbiamo dovuto adottare un approccio ibrido, ricavando $V_1$ e $V_2$ e utilizzando i dati sperimentali misurati risalire alla fase di $V\ped{out}$. La misura è stata quindi molto indiretta, con conseguente perdita di risoluzione. Per le resistenze usate, che non sono state misurate col multimetro, abbiamo dovuto usare l'incertezza di targa, pari al 5\%. Per fortuna abbiamo misurato le capacità, che hanno un incertezza nominale del 20\%.
 
-[GRAFICI]
+Il grafico in Figura \ref{fig:g} riporta i diagrammi di Bode del circuito.
+
+\begin{SCfigure}
+    \includegraphics[scale=0.50]{g.pdf}
+    \caption{Il grafico illustra i diagrammi di Bode per un filtro notch costruito con un
+        ponte di Wien.
+        I dati riguardano la tensione $V\ped{out} = V_1 - V_2$ in relazione a $V\ped{in}$. 
+        Nel primo grafico i dati concordano con l'andamento previsto
+        fino a circa 5 kHz. Abbiamo quindi corretto le nostre previsioni aggiungendo una resistenza
+        in serie al condensatore $C_3$ (vedi Figura \ref{fig:notch}). Ad alte frequenze il
+        condensatore si comporta come un corto circuito; è dunque necessario tenere in
+        considerazione la resistenza dovuta al filo.
+        La correzione è risultata molto consistente con i dati.
+        Il secondo grafico mostra lo sfasamento di
+        $V\ped{out}$ rispetto a $V\ped{in}$. Anche in questo caso i dati sono in accordo
+        con la previsione teorica. Tuttavia vogliamo sottolineare che durante l'esperienza
+        abbiamo misurato solo la fase di $V_1$ e l'ampiezza di $V\ped{out}$, a causa di un
+        disguido. Abbiamo quindi dovuto estrapolare i lo sfasamento di $V\ped{out}$ utilizzando
+        anche i valori delle resistenze, che non abbiamo misurato con il multimetro. Quindi
+        i dati sono piagati da incertezze molto consistenti (per le resistenze
+        abbiamo utilizzato il 5\%), come si nota dalle barre d'errore. 
+    }
+    \label{fig:g}
+\end{SCfigure}

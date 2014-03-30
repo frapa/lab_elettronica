@@ -48,7 +48,6 @@ exp_Id = vin / exp_Zd
 dexp_Id = np.sqrt((dvin/exp_Zd * dvin)**2 + (vin/exp_Zd**2 * dexp_Zd)**2)
 exp_Is = vin / exp_Zs
 dexp_Is = np.sqrt((dvin/exp_Zs * dvin)**2 + (vin/exp_Zs**2 * dexp_Zs)**2)
-print((dvin/exp_Zs * dvin), (vin/exp_Zs**2 * dexp_Zs))
 
 exp_V2 = vin - R*exp_Id
 dexp_V2 = np.sqrt(dvin**2 + (exp_Id*dR)**2 + (R*dexp_Id)**2)
@@ -125,7 +124,7 @@ line = ax1.errorbar(x=f, y=tdB,
     fmt='-', c='gray', linewidth=3,
     zorder=1)
 
-line2 = ax1.errorbar(x=f, y=corr_tdB,
+line_corr = ax1.errorbar(x=f, y=corr_tdB,
     #yerr=dy, #xerr=,
     fmt='--', c='black', linewidth=2,
     zorder=1)
@@ -137,7 +136,7 @@ dots1 = ax1.errorbar(x=freq, y=dB,
     ecolor='black', elinewidth=4,
     capsize=0, zorder=2)
     
-ax1.set_ylabel(u'Attenuazione [dB]',
+ax1.set_ylabel(u'Guadagno [dB]',
     labelpad=12, fontsize=16)
 
 
@@ -175,13 +174,14 @@ ax2.set_ylabel(u'Sfasamento [gradi]',
 
 ax2.grid(True)
 ax2.set_xscale('log')
-ax2.set_ylim((-35, 35))
+ax2.set_ylim((-40, 40))
 ax2.set_xlim((40, 1.2e5))
 #ax2.set_yticks((-90, -67.5, -45, -22.5, 0, 22.5, 45, 67.5, 90))
 
 # questo produce una legenda
-#ax2.legend((dots1, line, line_corr), ("Punti sperimentali", "Previsione teorica", "Correzione"), 'upper right',
-#    prop={'size': 15})
+ax1.legend((dots1, line, line_corr),
+    ("Punti sperimentali", "Previsione teorica", "Correzione"), 'lower right',
+    prop={'size': 15})
 
 # questo imposta i bordi del grafico
 f1.subplots_adjust(left=0.12, right=0.97,
