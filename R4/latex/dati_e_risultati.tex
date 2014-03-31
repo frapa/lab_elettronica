@@ -2,7 +2,7 @@
 
 \subsection*{Determinazione della capacità incognita}
 
-In questa prima parte della relazione illustreremo come abbiamo trovato la capacità incognita ($C_3$) sfruttando le proprietà del circuito rappresentato in Figura \ref{fig:notch}.
+In questa prima parte della relazione illustreremo come abbiamo trovato la capacità incognita ($C_3$) sfruttando le proprietà del circuito rappresentato in Figura \ref{fig:r}.
 Risolvendo questo tipo di circuito, nel caso in cui questo sia bilanciato, si ottengono i seguenti risultati:
 
 %\begin{equation}
@@ -25,7 +25,7 @@ Il valore teorico $C\ped{3teo}$ da noi trovato per la capacità incognita è il 
 %	C\ped{3teo} \,=\, XXX \qquad \text{sfruttando la rezione (\ref{eq:C})}
 %\end{equation*}
 \begin{equation}
-	C\ped{3teo} \,=\, 2.9 \,\pm\, 0.2 \,\si{\nano\farad}  \qquad \text{sfruttando la relzione (\ref{eq:C_imm})}
+	C\ped{3teo} \,=\, 3.0 \,\pm\, 0.2 \,\si{\nano\farad}  \qquad \text{sfruttando la relzione (\ref{eq:C_imm})}
 	\label{eq:C_teo_imm}
 \end{equation}
 %2.972638538603707e-09
@@ -40,11 +40,36 @@ Mentre il valore sperimentale di $C\ped{3exp}$ ottenuto grazie alla misura diret
 
 \subsection*{Ponte di Wien come filtro notch}
 
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \centering
+  \vspace{-1cm}
+  \begin{circuitikz}[scale=0.8, transform shape, font=\Large] \draw
+   (0,0) 
+    to [short, o-*] (3, 0)
+    to [short, *-] (3, 0.5) -- (2, 0.5)
+    to [R, l=$R_3$] (2, 2.5) -- (4, 2.5)
+    to [C, l=$C_3$] (4, 0.5) -- (3, 0.5)
+    (3, 2.5) to [short, -*] (3, 3)
+    to [short, *-o] (5.5, 3) node[anchor=west]{$V_1$}
+    (3, 3) to [C, l=$C_1$] (3, 4.2)
+    to [R, l=$R_1$, -*] (3, 6)
+    to [short, *-o] (0, 6)
+    (3, 0) -- (10, 0)
+    to [R, l=$R_4$] (10, 3)
+    to [short, *-o] (8, 3) node[anchor=east]{$V_2$}
+    (10, 3) to [R, l=$R_2$] (10, 6) -- (2, 6);
+    \draw[triangle 90-triangle 90] (0, 0.3) -- (0, 5.7);
+    \node[anchor=west] at (0, 3) {$V\ped{in}$};
+  \end{circuitikz}
+  \caption{Ponte di Wien utilizzato come filtro notch.}
+  \label{fig:notch}
+\end{wrapfigure}
+
 Vogliamo ora scoprire se sia possibie utilizzare il ponte di Wien come filtro notch. A tal fine è necessario apportate alcune modifiche strutturali al circuito. Tali cambiamenti sono illustrati in Figura \ref{fig:notch}.
 
 Abbiamo studiato la funzione di trasferimento del circuito, cioè il rapporto $V\ped{out}/V\ped{in}$, sia dal punto di vista teorico che da quello sperimentale. Risolvendo il circuito si ottiene la $V\ped{out} = V_1 - V_2$, con relativa ampiezza e fase. Si è poi misurato, al variare della frequenza, l'ampiezza e la fase (rispetto a $V\ped{in}$) di $V\ped{out}$. O almeno avremmo dovuto misurare tale fase.
 
-Durante l'esecuzione dell'esperienza abbiamo però sbagliato, misurando l'ampiezza corretta, ma la fase di $V_1$ invece che quella di $V\ped{out}$. Per rimediare abbiamo dovuto adottare un approccio ibrido, ricavando $V_1$ e $V_2$ e utilizzando i dati sperimentali misurati risalire alla fase di $V\ped{out}$. La misura è stata quindi molto indiretta, con conseguente perdita di risoluzione. Per le resistenze usate, che non sono state misurate col multimetro, abbiamo dovuto usare l'incertezza di targa, pari al 5\%. Per fortuna abbiamo misurato le capacità, che hanno un incertezza nominale del 20\%.
+Durante l'esecuzione dell'esperienza abbiamo però sbagliato, misurando l'ampiezza corretta, ma la fase di $V_1$ invece che quella di $V\ped{out}$. Per rimediare abbiamo dovuto adottare un approccio ibrido, ricavando $V_1$ e $V_2$ e utilizzando i dati sperimentali misurati per risalire alla fase di $V\ped{out}$. La misura è stata quindi molto indiretta, con conseguente perdita di risoluzione. Per le resistenze usate, che non sono state misurate col multimetro, abbiamo dovuto usare l'incertezza di targa, pari al 5\%. Per fortuna abbiamo misurato le capacità, che hanno un incertezza nominale del 20\%.
 
 Il grafico in Figura \ref{fig:g} riporta i diagrammi di Bode del circuito.
 

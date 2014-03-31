@@ -26,18 +26,18 @@ L'errore che abbiamo attribuito alle misure prese mediante il multimero e l'osci
     to [C, l=$C_3$] (4, 0.5) -- (3, 0.5)
     (3, 2.5) to [short, -*] (3, 3)
     to [short, *-o] (5.5, 3) node[anchor=west]{$V_1$}
-    (3, 3) to [C, l=$C_1$] (3, 4.2)
-    to [R, l=$R_1$, -*] (3, 6)
-    to [short, *-o] (0, 6)
+    (3, 6) to [vR, l=$R_1$, -*] (3, 3)
+    (3, 6) to [short, *-o] (0, 6)
     (3, 0) -- (10, 0)
+    to [C, l=$C_4$] (10, 1)
     to [R, l=$R_4$] (10, 3)
     to [short, *-o] (8, 3) node[anchor=east]{$V_2$}
     (10, 3) to [R, l=$R_2$] (10, 6) -- (2, 6);
     \draw[triangle 90-triangle 90] (0, 0.3) -- (0, 5.7);
     \node[anchor=west] at (0, 3) {$V\ped{in}$};
   \end{circuitikz}
-  \caption{Ponte di Wien utilizzato come filtro notch.}
-  \label{fig:notch}
+  \caption{Ponte di Wien utilizzato per ricavare $C_3$.}
+  \label{fig:r}
   \vspace{-1cm}
 \end{wrapfigure}
 
