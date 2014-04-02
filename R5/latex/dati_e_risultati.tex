@@ -1,1 +1,35 @@
 \section*{Dati e risultati}
+
+\subsection*{Corrente di attivazione}
+
+Per stimare la corrente di attivazione ($I_0$) del nostro interruttore differenziale abbiamo montato il nostro circuito come mostrato in Figura XXX.
+Quindi abbiamo variato il valore della resistenza ($R$) fino a che l'interruttore non avesse funzionato.
+Naturalmente la precisione della stima del valore di resistenza è andata aumentando passo passo e, una volta trovato il valore minimo, abbiamo verificato più volte che tale risultato fosse corretto.
+il valore che abbiamo ottenuto è stato di:
+
+\begin{equation}
+        R \,=\, 348 \pm 1 \,\si{\ohm}
+\end{equation}
+
+Quindi una volta trovato il valore di $R$ abbiamo sfruttato l'amperometro per effettuare una misura diretta dell'intensità di corrente del nostro circuito e abbiamo ottenuto il seguente valore per la corrente di attivazione (I\ped{exp}):
+
+\begin{equation}
+        I\ped{exp} \,=\, 22.2 \pm 0.1 \,\si{\milli\ampere}
+\end{equation}
+
+Per assicurarci che i valori ottenuti fossero plausubili abbiamo sfruttato la legge di Ohm per ricavare il valore ipotetico di corrente passante nel circuito assumendo come $R$ il valore precedentemente ottenuto. Il valore teorico di $I$ risulta essere il seguente:
+
+\begin{equation}
+        I\ped{teo} \,=\, 22 \pm 1 \,\si{\milli\ampere}
+\end{equation}
+
+Questo valore è stao ottenuto assumendo che il nostro generatore fosse affetto da un $5\%$ di errore. A primo acchito può sembrare alto, ma dal momento che nei calcoli non si è tenuto conto della resistenza interna degli strumenti e dell'interruttore differenziale forse tale incertezza non è del tutto ingiustificata.
+
+\subsection*{Tempo di Intervento}
+
+In questa seconada parte invece voglamo stimare il tempo di inervento ($\tau\ped{int}$) del nostro interruttore differenziale. Per farlo abbiamo impostato un valore di $R$ inferiore al minimo trovato in modo che l'interruttore scattasse non appena si fosse alimentato il circuito. Quindi grazie ai due sagnali in entrata all'oscilloscopio, uno dellla tensione in ingresso al circuito ($V\ped{in}$) e uno della tensione ai capi dell'interruttore ($V_0$) ci è possibile stimare il tempo di intervento dell'interruttore.
+
+Infatti $V\ped{in}$ si presenta come un segnale sinusoidale fin dall'accensione del generatore, mentre $V_0$ risuta essere, giustamente, nullo fino a che non scatta l'interruttore. Da quel momento in poi il segnale di $V_0$ coinciderà con quello di $V\ped{in}$. Pertanto il tempo di interevnto e possibile stimarlo leggendo direttamente sull'oscilloscopio la differenza di fase tra i due seganli.
+
+Uno dei più significativi screenshot ottenuti è riportato di seguito, e crediamo possa essere di aiuto nel capire quanto esposto in precedenza.
+ 
