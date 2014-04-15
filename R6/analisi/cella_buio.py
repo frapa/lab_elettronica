@@ -8,7 +8,7 @@ import matplotlib
 from matplotlib import pyplot as plt
 
 
-dati = np.genfromtxt("../dati/diodo.csv", delimiter=",", skip_header=2)
+dati = np.genfromtxt("../dati/buio.csv", delimiter=",", skip_header=2)
 I = dati[:,0]
 V = dati[:,1]
 
@@ -45,8 +45,8 @@ ax1.set_ylabel(u'Intensità [mA]',
 
 ax1.grid(True)
 #ax1.set_xscale('log')
-ax1.set_ylim((-40, 620))
-ax1.set_xlim((-52, 0))
+ax1.set_ylim((-10, 100))
+ax1.set_xlim((-55, 0))
 #for label in ax1.get_xaxis().get_majorticklabels():
 #  label.set_visible(False)
 #ax1.set_xticklabels(("", -50, -40, -30, -20, -10))
@@ -67,11 +67,12 @@ line = ax2.errorbar(x=Vp, y=Ip,
 
 ax2.grid(True)
 #ax1.set_xscale('log')
-ax2.set_ylim((-40, 620))
+ax2.set_ylim((-10, 100))
+ax2.set_xlim((0, 7.5))
 #ax2.set_xlim((-60, 0))
 for label in ax2.get_yaxis().get_majorticklabels():
    label.set_visible(False)
-ax2.set_xticklabels(("", 0.2, 0.4, 0.6, 0.8, 1.0, 1.2))
+#ax2.set_xticklabels(("", 0.2, 0.4, 0.6, 0.8, 1.0, 1.2))
 
 # questo produce una legenda
 #ax1.legend((line, line_corr),
@@ -84,7 +85,7 @@ f1.subplots_adjust(left=0.12, right=0.97,
     top=0.92, bottom=0.10, hspace=0.08, wspace=0)
     
 ### Aggiungere testo a caso XD
-plt.text(x=0.15, y=-110, s='Tensione [V]' )
+plt.text(x=0.25, y=-20, s='Tensione [V]' )
 
 # mostra grafico
 plt.show()  
