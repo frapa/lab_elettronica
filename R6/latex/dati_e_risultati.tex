@@ -1,10 +1,10 @@
 \section*{Dati e risultati}
 
-\subsection*{Diodo 1N4007}
+\subsection{Diodo 1N4007}
 
 Per studiare la caratteristica $I-V$ (corrente-tensione) di un diodo 1N4007 sia in polarizzazione inversa che in diretta ci siamo mossi come segue: abbiamo collegato il diodo all'alimentatore di tensione continua, misurando con il multimetro la corrente assorbita dal diodo.
 Ricordiamo che durante questa prima fase dell'esperienza abbiamo prestato attenzione che la corrente attraversante il diodo non superasse i $700\,\si{\milli\ampere}$.
-Grazie ai dati misurati abbiamo graficato la curva caratteristica $I-V$ del diodo, mostrata in figura \ref{fig:diodo}.
+Grazie ai dati misurati abbiamo graficato la curva caratteristica $I-V$ del diodo, mostrata in Figura \ref{fig:diodo}.
 
 %\begin{SCfigure}[1][b!]
 \begin{SCfigure}
@@ -15,7 +15,7 @@ Grazie ai dati misurati abbiamo graficato la curva caratteristica $I-V$ del diod
 \end{SCfigure}
 %\end{SCfigure}
 
-\subsection*{Cella fotovoltaica}
+\subsection{Cella fotovoltaica}
 
 Come secondo obbiettivo abbiamo valutato la caratteristica $I-V$ di una cella fotovoltaica monocristallina al silicio. Questo andamento è stato valutato sia ponendo la cella fotovoltaica al buio, ovvero ponendola all'interno del proprio involucro di cartone, sia esponendola ad una sorgente luminosa.
 Come nel caso precedente abbiamo misurato mediante il multimetro la correte passante nella cella fotovoltaica pe poi studiane l'andamento in funzione della tensione.
@@ -38,6 +38,33 @@ Il FillFactor dà un’indicazione delle prestazioni della cella.
 Quest’ultimo nelle celle al silicio cristallino assume valori generalmente intorno a 0,75 e 0,80. Il FillFactor è anche un parametro di giudizio sul rendimento della cella: elevati valori di questi parametri sono anche indicatori di migliori prestazioni.
 
 \begin{equation}
-	\text{FillFactor} \,=\, \frac{I_m\,*\,V_m}{I\ped{sc}\,*\,V\ped{oc}} \,=\, ...
+	\text{FillFactor} \,=\, \frac{I_m\,\cdot\,V_m}{I\ped{sc}\,\cdot\,V\ped{oc}} \,=\, ...
 \end{equation}
+
+\subsection{Ponte Graetz}
+
+In questa parte ell'esperienza abbiamo realizzato un circuito raddrizzatore a ponte di diodi, o ponte di Graetz. Il circuito realizzato è illustrato in Figura %\ref{fig:raddrizzatore}, eccetto per la presenza del condensatore, che in questa prima analisi non è utilizzato.
+Per realizzare il ponte di Graetz abbiamo utilizzato quattro diodi 1N4007 e un carico resistivo da $10\,\si{\kilo\ohm}$. Di questo circuito ne andremo a gaficare la forma d'onda risultante e ne misureremo l'ampiezza.
+Quello che ci aspettiamo di vedere è un segnale che è la somma di una semionda positiva e di una semionda negtiva capovolta (doppia semionda).
+Infatti questa soluzione, molto usata negli alimentatori, rende molto più semplice il successivo filtraggio e livellamento della tensione fino ad ottenere una corrente continua, non richiedendo peraltro un trasformatore con doppio avvolgimento a presa centrale.
+La forma d'onda che abbiamo ottenuto è la seguente:
+
+[IMMAGINE]
+
+Successivamente abbiamo studiato la forma d'onda risultante nel caso in cui si variasse la capacità ($C$) del condensatore. Abiamo misurato la frequenza e l'ampiezza del ripple per quattro valori di capacità. Inoltre sempre per glistessi valori abbiamo misurato la tensione $V\ped{m}$ e abbiamo determinato il fattore di ripple.
+
+\begin{equation}
+	\text{Fattore di ripple} \,=\, \frac{V\ped{r}}{V\ped{m}}
+\end{equation}
+
+dove con $V\ped{r}$ si indica il valore efficace del ripple, ossia dell’ondulazione residua in uscita, mentre con $V\ped{m}$ il valore medio di tensione.
+Ricordiamo che il fattore di ripple è la grandezza che caratterizza la qualità di un alimentatore.
+
+\subsection{Raddrizzatore di tensione a doppia semionda}
+
+Sfruttando il circuito illustrato in Figura \ref{fig:doppio} abbiamo rietuto l'analisi fatta nel punto precedente è i risultati da noi ottenuti sono i seguenti:
+
+
+
+
 
