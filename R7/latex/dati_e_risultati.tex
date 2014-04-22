@@ -25,16 +25,55 @@ Infine vogliamo evidenziare che nel caso in cui si invertisse la poarità del di
 
 \subsection{Diodo Zener}
 
-In questa seconda sezione vogliamo studiare la caratteristica $I-V$ in polarizzazione inversa de
+In questa seconda sezione vogliamo studiare la caratteristica $I-V$ in polarizzazione inversa del diodo Zener, modello XZY85C10 ed il suo uso come stabilizzatore di tensione.
+Per studiarne la caratteristica $I-V$ abbiamo applicato ai capi del diodo Zener una tensione DC di $\pm\,25\,\si{\volt}$. 
+Durante lo studio della caratteristca $I-V$ del diodo abbiamo tenuto conto della potenza massima dissipabile dal diodo. Infatti abbiamo fatto attenzione che il prodotto tensione-corrente non superasse mai la potenza ($W$) di $1\,\si{\watt}$, che è il valore massimo sopportabile dal nostro diodo.
+I valori ottenuti sono riportati nel seguente grafico:
 
 \begin{SCfigure}
     \includegraphics[scale=0.7]{cara_zener.pdf}
     \caption{Andrea è un party dancer. Sono un fucking spammer.}
-    \label{fig:resistenza}
+    \label{fig:caratteristica_I-V}
 \end{SCfigure}
+
+Inoltre abbiamo calcolato la resistenza dinamica ($R_d$) del diodo sfruttando la seguente relazione:
+
+\begin{equation}
+	R_d \,=\, \frac{\Delta V}{\Delta I} \,=\, ...
+\end{equation}
+
+dove $\Delta V$ indica una differenza di potenziale e $\Delta I$ indica la differenza di intensità di corrente corrispondente. Inoltre facendo riferimento alla figura sopra riportata (Figura \ref{fig:caratteristica_I-V}) possiamo notare che la resistenza dinamica $R_d$ non è altro che l'inverso del coefficiente angolare della retta $I-V$ plottata.\\
+
+Ottenute queste informazioni su questo modello di diodo Zener ci siamo proposti di determinare sperimentalmente, studiandone la caratteristica $I-V$, il range di funzionamento di tale componente elettronico se usato come stabilizzatore di tensione.
+A tal fine abbiamo sfruttato il circuito illustrato in Figura \ref{fig:circuito_zener} che è stato alimentato con il generatore di tensione DC $\pm\,25\,\si{\volt}$ e la resistenza ($R$) applicatavi è di $1\,\si{\kilo\ohm}$.
+I risultati da noi ottenuti sono riportati nel grafico sottostante:
 
 \begin{SCfigure}
     \includegraphics[scale=0.7]{stab.pdf}
     \caption{Andrea è un party dancer. Sono un fucking spammer.}
-    \label{fig:resistenza}
+    \label{fig:stab_tensione}
 \end{SCfigure}
+
+Infine vogliamo calcolare il raporto di stabilizzazione ($\chi$) sia teorico che sperimentale e verificarne la compatibilità.
+
+\begin{equation}
+	\chi\ped{exp} \,=\, \frac{\Delta V\ped{out}}{\Delta V\ped{in}} \,=\, ...
+\end{equation}
+
+\begin{equation}
+	\chi\ped{teo} \,=\, \frac{R_d}{R\,+\,R_d} \,=\, ...
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
