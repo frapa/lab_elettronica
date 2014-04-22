@@ -2,11 +2,12 @@
 
 \subsection{Rilevatore di picchi}
 
-In questa sezione ci occuperemo di verificare il corretto funzionamento di un circuito rilevatore di picchi costruito con un diodo 1N4007. Il circuito che abbiamo utilizzato è schematizzato in Figura \ref{fig:circuito_peak}.
+In questa sezione ci occuperemo di verificare il corretto funzionamento di un circuito rilevatore di picchi costruito con un diodo 1N4007.
+Il circuito che abbiamo utilizzato è schematizzato in Figura \ref{fig:circuito_peak}.
 In questa configurazione abbiamo impostato che il valore di capacità ($C$) fosse di $1\,\si{\micro\farad}$, mentre il valore della resistenza $R_2$ fosse di $1\,\si{\kilo\ohm}$. Ricordiamo che sul valore della capacità abbiamo un incertezza nominale dell'$1\,\%$,mentre sulla resistenza vi è un errore nominale del $5\,\%$.
 Il circuito è stato alimentato con una differenza di potenziale pico-pico in entrata di $10\,\si{\volt}$ ad una frequenza di $100\,\si{\hertz}$.
 Quindi per verificare il corretto funzionamento del nostro rilevatore di picchi visuaizziamo la tensione in uscita ($V\ped{out}$) e ne studiamo l'andamento al variare di $C$ e della resistenza $R_1$.
-Aggiungiamo che per semplificare le operazioni abbiamo deciso di variare la resistenza $R_1$ mantenedocostante la capacità, e di variare $C$ mantenendo costante $R_2$.
+Aggiungiamo che per semplificare le operazioni abbiamo deciso di variare la resistenza $R_1$ mantenedo costante la capacità, e di variare $C$ mantenendo costante $R_2$.
 Di seguito riportiamo gli andamenti della tensione in uscita ($V\ped{out}$) al variare di $C$ e di $R_1$.
 
 \begin{SCfigure}
@@ -39,8 +40,11 @@ I valori ottenuti sono riportati nel seguente grafico:
 Inoltre abbiamo calcolato la resistenza dinamica ($R_d$) del diodo sfruttando la seguente relazione:
 
 \begin{equation}
-	R_d \,=\, \frac{\Delta V}{\Delta I} \,=\, ...
+	R_d \,=\, \frac{\Delta V}{\Delta I} \,=\, 14.2\,\pm\,0.1 \,\,\si{\ohm}
 \end{equation}
+
+%14.209713510314533
+%0.106189350778691
 
 dove $\Delta V$ indica una differenza di potenziale e $\Delta I$ indica la differenza di intensità di corrente corrispondente. Inoltre facendo riferimento alla figura sopra riportata (Figura \ref{fig:caratteristica_I-V}) possiamo notare che la resistenza dinamica $R_d$ non è altro che l'inverso del coefficiente angolare della retta $I-V$ plottata.\\
 
@@ -57,23 +61,11 @@ I risultati da noi ottenuti sono riportati nel grafico sottostante:
 Infine vogliamo calcolare il raporto di stabilizzazione ($\chi$) sia teorico che sperimentale e verificarne la compatibilità.
 
 \begin{equation}
-	\chi\ped{exp} \,=\, \frac{\Delta V\ped{out}}{\Delta V\ped{in}} \,=\, ...
+	\chi\ped{exp} \,=\, \frac{\Delta V\ped{out}}{\Delta V\ped{in}} \,=\, 0.020\,\pm\,0.001
+	\label{eq:c_exp}
 \end{equation}
 
 \begin{equation}
-	\chi\ped{teo} \,=\, \frac{R_d}{R\,+\,R_d} \,=\, ...
+	\chi\ped{teo} \,=\, \frac{R_d}{R\,+\,R_d} \,=\, 0.0140\,\pm\,0.0006
+	\label{eq:c_teo}
 \end{equation}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
