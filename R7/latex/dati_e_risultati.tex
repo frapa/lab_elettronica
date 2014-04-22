@@ -6,21 +6,22 @@ In questa sezione ci occuperemo di verificare il corretto funzionamento di un ci
 Il circuito che abbiamo utilizzato è schematizzato in Figura \ref{fig:circuito_peak}.
 In questa configurazione abbiamo impostato che il valore di capacità ($C$) fosse di $1\,\si{\micro\farad}$, mentre il valore della resistenza $R_2$ fosse di $1\,\si{\kilo\ohm}$. Ricordiamo che sul valore della capacità abbiamo un incertezza nominale dell'$1\,\%$,mentre sulla resistenza vi è un errore nominale del $5\,\%$.
 Il circuito è stato alimentato con una differenza di potenziale pico-pico in entrata di $10\,\si{\volt}$ ad una frequenza di $100\,\si{\hertz}$.
+
 Quindi per verificare il corretto funzionamento del nostro rilevatore di picchi visuaizziamo la tensione in uscita ($V\ped{out}$) e ne studiamo l'andamento al variare di $C$ e della resistenza $R_1$.
 Aggiungiamo che per semplificare le operazioni abbiamo deciso di variare la resistenza $R_1$ mantenedo costante la capacità, e di variare $C$ mantenendo costante $R_2$.
 Di seguito riportiamo gli andamenti della tensione in uscita ($V\ped{out}$) al variare di $C$ e di $R_1$.
 
-\begin{SCfigure}
+\begin{figure}[H]
     \includegraphics[scale=0.7]{capacita.pdf}
     \caption{}
     \label{fig:capacita}
-\end{SCfigure}
+\end{figure}
 
-\begin{SCfigure}
+\begin{figure}[H]
     \includegraphics[scale=0.7]{resistenza.pdf}
     \caption{Andrea è un party dancer. Sono un fucking spammer.}
     \label{fig:resistenza}
-\end{SCfigure}
+\end{figure}
 
 Infine vogliamo evidenziare che nel caso in cui si invertisse la poarità del diodo si noterbbe che:...
 
@@ -31,11 +32,11 @@ Per studiarne la caratteristica $I-V$ abbiamo applicato ai capi del diodo Zener 
 Durante lo studio della caratteristca $I-V$ del diodo abbiamo tenuto conto della potenza massima dissipabile dal diodo. Infatti abbiamo fatto attenzione che il prodotto tensione-corrente non superasse mai la potenza ($W$) di $1\,\si{\watt}$, che è il valore massimo sopportabile dal nostro diodo.
 I valori ottenuti sono riportati nel seguente grafico:
 
-\begin{SCfigure}
+\begin{figure}[H]
     \includegraphics[scale=0.7]{cara_zener.pdf}
     \caption{Andrea è un party dancer. Sono un fucking spammer.}
     \label{fig:caratteristica_I-V}
-\end{SCfigure}
+\end{figure}
 
 Inoltre abbiamo calcolato la resistenza dinamica ($R_d$) del diodo sfruttando la seguente relazione:
 
@@ -52,11 +53,11 @@ Ottenute queste informazioni su questo modello di diodo Zener ci siamo proposti 
 A tal fine abbiamo sfruttato il circuito illustrato in Figura \ref{fig:circuito_zener} che è stato alimentato con il generatore di tensione DC $\pm\,25\,\si{\volt}$ e la resistenza ($R$) applicatavi è di $1\,\si{\kilo\ohm}$.
 I risultati da noi ottenuti sono riportati nel grafico sottostante:
 
-\begin{SCfigure}
+\begin{figure}[H]
     \includegraphics[scale=0.7]{stab.pdf}
     \caption{Andrea è un party dancer. Sono un fucking spammer.}
     \label{fig:stab_tensione}
-\end{SCfigure}
+\end{figure}
 
 Infine vogliamo calcolare il raporto di stabilizzazione ($\chi$) sia teorico che sperimentale e verificarne la compatibilità.
 
