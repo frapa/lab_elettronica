@@ -18,6 +18,7 @@ dRd = ( ((dk)**2)*(1/(k)**2)**2 )**(1/2)
 print(Rd)
 print(dRd)
 print()
+
 ### rapporto di stabilizzazione ###
 
 R = 1000
