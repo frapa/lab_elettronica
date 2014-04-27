@@ -1,3 +1,4 @@
+
 # -*- encoding: utf-8 -*-
 
 from math import *
@@ -20,6 +21,10 @@ In = I[np.logical_not(ids)]
 Vn = V[np.logical_not(ids)]
 
 matplotlib.rcParams['font.size'] = 15
+
+W = I*V
+
+print(W)
 
 ### PASSA-BASSO
 # Creo un grafico la dimensione è in pollici

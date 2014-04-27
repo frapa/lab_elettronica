@@ -2,7 +2,7 @@
 
 \subsection{Diodo 1N4007}
 
-Per studiare la caratteristica $I-V$ (corrente-tensione) di un diodo 1N4007 sia in polarizzazione inversa che in diretta ci siamo mossi come segue: abbiamo collegato il diodo all'alimentatore di tensione continua, misurando con il multimetro la corrente assorbita dal diodo.
+Per studiare la caratteristica $I-V$ (corrente-tensione) di un diodo 1N4007 sia in polarizzazione inversa che in diretta ci siamo mossi come segue: abbiamo collegato il diodo all'alimentatore di tensione continua e abbiamo misurato con il multimetro la corrente passante per il diodo.
 Ricordiamo che durante questa prima fase dell'esperienza abbiamo prestato attenzione che la corrente attraversante il diodo non superasse i $700\,\si{\milli\ampere}$.
 Grazie ai dati misurati abbiamo graficato la curva caratteristica $I-V$ del diodo, mostrata in Figura \ref{fig:diodo}.
 
@@ -49,7 +49,11 @@ Quello che ci aspettiamo di vedere è un segnale che è la somma di una semionda
 Infatti questa soluzione, molto usata negli alimentatori, rende molto più semplice il successivo filtraggio e livellamento della tensione fino ad ottenere una corrente continua, non richiedendo peraltro un trasformatore con doppio avvolgimento a presa centrale.
 La forma d'onda che abbiamo ottenuto è la seguente:
 
-[IMMAGINE]
+\begin{SCfigure}
+    \includegraphics[scale=0.5]{n2_bianco.pdf}
+    \caption{L'immagine, direttamente acquisita dall'osciloscopio, mostra con la lina grigia il segnale in ingresso nel nostro circuito (Figura \ref{fig:raddrizzatore}), mentre la linea nera mostra la forma d'onda in uscita dal nostrocircuito. Come ci si aspettava il seganle negativo viene raddrizzato grazie al ponte di diodi. Si può inoltre notare come l'intensità della tensione sia rimasta la stessa, dal momento che il ponte viene utilizzato solamente come raddrizzatore di corrente e pertanto trasmette completamente il segnale in ingresso.}
+    \label{fig:graetz2}
+\end{SCfigure}
 
 Successivamente abbiamo studiato la forma d'onda risultante nel caso in cui si variasse la capacità ($C$) del condensatore. Abiamo misurato la frequenza e l'ampiezza del ripple per quattro valori di capacità. Inoltre sempre per glistessi valori abbiamo misurato la tensione $V\ped{m}$ e abbiamo determinato il fattore di ripple.
 
@@ -61,11 +65,38 @@ dove con $V\ped{r}$ si indica il valore efficace del ripple, ossia dell’ondula
 Ricordiamo che il fattore di ripple è la grandezza che caratterizza la qualità di un alimentatore.
 I risultati che bbiamo ottenuto sono i seguenti:
 
+%\begin{SCfigure}
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{l c c c}
+        \toprule
+		Capacità $[\si{\micro\farad}]$ & $V\ped{r} \; [\si{\volt}]$ & $V\ped{m} \, [\si{\volt}]$ & Fattore di ripple \\
+        \midrule
+		$ 0.500 \pm 0.005 $ & $6.8 \pm 0.1 $ & $ 6.898 \pm 0.001 $ & $ 0.99 \pm 0.01 $ \\
+		$ 1.00 \pm 0.01 $ & $ 4.8 \pm 0.1$ & $ 7.73 \pm 0.01 $ & $ 0.62 \pm 0.01$ \\
+		$ 2.00 \pm 0.02 $ & $ 3.2 \pm 0.1$ & $ 8.47 \pm 0.01 $ & $ 0.38 \pm 0.01$ \\
+		$ 3.00 \pm 0.03 $ & $ 2.4 \pm 0.1$ & $ 8.78 \pm 0.01 $ & $ 0.27 \pm 0.01$ \\
+		$ 5.00 \pm 0.05 $ & $ 1.6 \pm 0.1$ & $ 9.07 \pm 0.01 $ & $ 0.18 \pm 0.01$ \\
+        \bottomrule
+    \end{tabular}
+    \caption{In questa tabella sono riportati i valori della tensione media ($V\ped{m}$), della tensione di ripple ($V\ped{r}$) e del fattore di ripple al variare della capacità. La frequenza del segnale in ingresso stata costante per tutte le misure effettuate ed ha valore di $100\,\si{\hertz}$. }
+    \label{tab:ripple}
+\end{table}
+%\end{SCfigure}
+
 %\subsection{Raddrizzatore di tensione a doppia semionda}
 
 %Sfruttando il circuito illustrato in Figura \ref{fig:doppio} abbiamo rietuto l'analisi fatta nel punto precedente è i risultati da noi ottenuti sono i seguenti:
 
+%Capacità	500 nF	1 uF	2 uF	5 uF	3 uF
+%Ampiezza picco-picco	6.8 V	4.8 V	3.2 V	1.6 V	2.4 V
+%Freq (Hz)	100 Hz	100 Hz	100 Hz	100 Hz	100 Hz
+%Media	6.898 V	7.73 V	8.47 V	9.07 V	8.78 V
 
+%[ 0.98579298  0.62095731  0.37780401  0.27334852  0.17640573]
+
+%[ 0.01449766  0.01296153  0.0118148   0.01139378  0.01102707]
 
 
 
