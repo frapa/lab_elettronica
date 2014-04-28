@@ -20,8 +20,7 @@ Grazie ai dati misurati abbiamo graficato la curva caratteristica $I-V$ del diod
 
 Come secondo obbiettivo abbiamo valutato la caratteristica $I-V$ di una cella fotovoltaica monocristallina al silicio. Questo andamento è stato valutato sia ponendo la cella fotovoltaica al buio, ovvero ponendola all'interno del proprio involucro di cartone, sia esponendola ad una sorgente luminosa costante.
 Come nel caso precedente abbiamo misurato mediante il multimetro la correte passante nella cella fotovoltaica per poi studiane l'andamento in funzione della tensione.
-In questo caso abbiamo dovuto fare attenzione che la corrente massima nella cella fotovoltaica non superasse i \SI{100}{\milli\ampere}. I grafici delle misure sono
-le Figure \ref{fig:buio} e \ref{fig:luce}.
+In questo caso abbiamo dovuto fare attenzione che la corrente massima nella cella fotovoltaica non superasse i \SI{100}{\milli\ampere}. I grafici delle misure sono le Figure \ref{fig:buio} e \ref{fig:luce}.
 
 \begin{SCfigure}
     \includegraphics[scale=0.55]{buio.pdf}
@@ -39,23 +38,23 @@ le Figure \ref{fig:buio} e \ref{fig:luce}.
 \end{SCfigure}
 
 Infine abbiamo calcolato il Fill Factor. Il rapporto tra il prodotto $I_m$ e $V_m$ (rispettivamente i valori di intensità di corrente e tensione il cui rapporto è massimo e quindi la potenza ottenibile dalla cella è massima, ossia in corrispondenza del ginocchio della curva) e il prodotto tra $I\ped{sc}$ e $V\ped{oc}$ (che indicano rispettivamente la corrente di corto circuito per la tensione a vuoto) è chiamato appunto Fill Factor o fattore di riempimento della cella.
-Il FillFactor dà un’indicazione delle prestazioni della cella.
+Il Fill Factor dà un’indicazione delle prestazioni della cella.
 Quest’ultimo nelle celle al silicio cristallino assume valori generalmente intorno a 0,75 e 0,80. Il Fill Factor è anche un parametro di giudizio sul rendimento della cella: elevati valori di questi parametri sono anche indicatori di migliori prestazioni.
 
 \begin{equation}
-	\text{FF} \,=\, \frac{I_m\,\cdot\,V_m}{I\ped{sc}\,\cdot\,V\ped{oc}} \,=\, ...
+	\text{FF} \,=\, \frac{I_m\,\cdot\,V_m}{I\ped{sc}\,\cdot\,V\ped{oc}} \,=\, 0.710\,\pm\,0.007
 \end{equation}
 
 \subsection*{Ponte Graetz}
 
-In questa parte dell'esperienza abbiamo realizzato un circuito raddrizzatore a ponte di diodi, o ponte di Graetz. Il circuito realizzato è illustrato in Figura \ref{fig:raddrizzatore}, eccetto per la presenza del condensatore, che in questa prima analisi non è utilizzato.
+In questa parte dell'esperienza abbiamo realizzato un circuito raddrizzatore a ponte di diodi, o ponte di Graetz. Il circuito realizzato è illustrato in Figura \ref{fig:graetz}, eccetto per la presenza del condensatore, che in questa prima analisi non è utilizzato.
 Per realizzare il ponte di Graetz abbiamo utilizzato quattro diodi 1N4007 e un carico resistivo da $10\,\si{\kilo\ohm}$. Andremo a graficare la forma d'onda in uscita dal ponte e ne misureremo l'ampiezza.
 Quello che ci aspettiamo di vedere è un segnale che è la somma di una semionda positiva e di una semionda negtiva capovolta (doppia semionda).
-Infatti questa soluzione, molto usata negli alimentatori, rende molto più semplice il successivo filtraggio e livellamento della tensione fino ad ottenere una corrente continua, non richiedendo peraltro un trasformatore con doppio avvolgimento a presa centrale. La forma d'onda che abbiamo visualizzato sull'oscilloscopio è riportata in figura \ref{fig:graetz2}.
+Infatti questa soluzione, molto usata negli alimentatori, rende molto più semplice il successivo filtraggio e livellamento della tensione fino ad ottenere una corrente continua, non richiedendo peraltro un trasformatore con doppio avvolgimento a presa centrale. La forma d'onda che abbiamo visualizzato sull'oscilloscopio è riportata in Figura \ref{fig:graetz2}.
 
 \begin{figure}
     \includegraphics[width=\textwidth]{n2_bianco.pdf}
-    \caption{L'immagine, direttamente acquisita dall'osciloscopio, mostra con la linea grigia il segnale in ingresso nel nostro circuito (Figura \ref{fig:raddrizzatore}), mentre la linea nera mostra la forma d'onda in uscita dal ponte. Come ci si aspettava il seganle negativo viene raddrizzato grazie al ponte di diodi. Si può inoltre notare come l'intensità della tensione sia rimasta la stessa, dal momento che il ponte viene utilizzato solamente come raddrizzatore di corrente e pertanto trasmette completamente il segnale in ingresso.}
+    \caption{L'immagine, direttamente acquisita dall'osciloscopio, mostra con la linea grigia il segnale in ingresso nel nostro circuito (Figura \ref{fig:graetz}), mentre la linea nera mostra la forma d'onda in uscita dal ponte. Come ci si aspettava il seganle negativo viene raddrizzato grazie al ponte di diodi. Si può inoltre notare come l'intensità della tensione sia rimasta la stessa, dal momento che il ponte viene utilizzato solamente come raddrizzatore di corrente e pertanto trasmette completamente il segnale in ingresso.}
     \label{fig:graetz2}
 \end{figure}
 
