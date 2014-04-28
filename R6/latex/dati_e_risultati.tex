@@ -1,6 +1,6 @@
 \section*{Dati e risultati}
 
-\subsection{Diodo 1N4007}
+\subsection*{Diodo 1N4007}
 
 Per studiare la caratteristica $I-V$ (corrente-tensione) di un diodo 1N4007 sia in polarizzazione inversa che in diretta ci siamo mossi come segue: abbiamo collegato il diodo all'alimentatore di tensione continua e abbiamo misurato con il multimetro la corrente passante per il diodo.
 Ricordiamo che durante questa prima fase dell'esperienza abbiamo prestato attenzione che la corrente attraversante il diodo non superasse i $700\,\si{\milli\ampere}$.
@@ -8,62 +8,66 @@ Grazie ai dati misurati abbiamo graficato la curva caratteristica $I-V$ del diod
 
 %\begin{SCfigure}[1][b!]
 \begin{SCfigure}
-    \includegraphics[scale=0.50]{diodo.pdf}
+    \includegraphics[scale=0.55]{diodo.pdf}
     \caption{La figura mostra la caratteristica corrente-tensione ($I-V$) di un diodo 1N4007. Questo tipo di diodi ha una tensione di breakdown di circa 1000 V, valori che con il nostro alimentatore non siamo in grado di raggiungere.
-    La corrente di leakage è praticamente inesistente, mentre la tensione di cut-in è di circa 0.5 V, valore vicino al valore tipico di 0.6 V dei diodi al silicio. }
+    La corrente di leakage è praticamente inesistente, mentre la tensione di cut-in è di circa 0.5 V, valore vicino al valore tipico di 0.6 V dei diodi al silicio. 
+    Si presti attenzione al cambio di scala.}
     \label{fig:diodo}
 \end{SCfigure}
 %\end{SCfigure}
 
-\subsection{Cella fotovoltaica}
+\subsection*{Cella fotovoltaica}
 
-Come secondo obbiettivo abbiamo valutato la caratteristica $I-V$ di una cella fotovoltaica monocristallina al silicio. Questo andamento è stato valutato sia ponendo la cella fotovoltaica al buio, ovvero ponendola all'interno del proprio involucro di cartone, sia esponendola ad una sorgente luminosa.
-Come nel caso precedente abbiamo misurato mediante il multimetro la correte passante nella cella fotovoltaica pe poi studiane l'andamento in funzione della tensione.
-Anche in questo caso abbiamo dovuto fare attenzione che la corrente massima nella cella fotovoltaica non superasse i $100\,\si{\milli\ampere}$.
+Come secondo obbiettivo abbiamo valutato la caratteristica $I-V$ di una cella fotovoltaica monocristallina al silicio. Questo andamento è stato valutato sia ponendo la cella fotovoltaica al buio, ovvero ponendola all'interno del proprio involucro di cartone, sia esponendola ad una sorgente luminosa costante.
+Come nel caso precedente abbiamo misurato mediante il multimetro la correte passante nella cella fotovoltaica per poi studiane l'andamento in funzione della tensione.
+In questo caso abbiamo dovuto fare attenzione che la corrente massima nella cella fotovoltaica non superasse i \SI{100}{\milli\ampere}. I grafici delle misure sono
+le Figure \ref{fig:buio} e \ref{fig:luce}.
 
 \begin{SCfigure}
-    \includegraphics[scale=0.5]{buio.pdf}
-    \caption{La caratteristica I-V di una cella fotovoltaica monocristallina al silicio al buio è per molti aspetti simile alla caratteristica di un diodo, con la differenza che la tensione di attivazione è di circa 5 V.}
+    \includegraphics[scale=0.55]{buio.pdf}
+    \caption{La caratteristica I-V di una cella fotovoltaica monocristallina al silicio al buio è per molti aspetti simile alla caratteristica di un diodo, con la differenza che la tensione di attivazione è di circa 5 V. Si presti attenzione al cambio di scala tra i valori negativi e positivi della tensione.}
     \label{fig:buio}
 \end{SCfigure}
 
 \begin{SCfigure}
-    \includegraphics[scale=0.5]{luce.pdf}
-    \caption{Questo grafico ilustra la carateristica $I-V$ di una cella fotovoltaica al silicio esposta ad una sorgente luminosa. Sotto queste condizioni, la curva caratteristica varia.}
+    \includegraphics[scale=0.53]{luce.pdf}
+    \caption{Questo grafico ilustra la carateristica $I-V$ di una cella fotovoltaica al silicio esposta ad una sorgente luminosa costante. La curva è molto diversa da quella mostrata
+        in Figura \ref{fig:buio}. La cella illuminata ma non alimentata con una differenza di potenziale dall'esterno fornisce una corrente costante di circa -16.8 mA, che scorre
+        dal catodo all'anodo. Quando l'alimentazione esterna sale, la cella si comporta come un diodo, però con una tensione di attivazione di soli 0.8 V circa, molto minore di quella
+        di una cella non illuminata. Si presti attenzione al cambio scala.}
     \label{fig:luce}
 \end{SCfigure}
 
-Infine abbiamo calcolato il FillFactor. Il rapporto tra il prodotto $I_m$ e $V_m$ (rispettivamente i valori di intensità di corrente e tensione il cui rapporto è massimo e quindi la potenza ottenibile dalla cella è massima, ossia in corrispondenza del ginocchio della curva) e il prodotto tra $I\ped{sc}$ e $V\ped{oc}$ (che indicano rispettivamente la corrente di corto circuito per la tensione a vuoto) è chiamato appunto FillFactor o fattore di riempimento della cella.
+Infine abbiamo calcolato il Fill Factor. Il rapporto tra il prodotto $I_m$ e $V_m$ (rispettivamente i valori di intensità di corrente e tensione il cui rapporto è massimo e quindi la potenza ottenibile dalla cella è massima, ossia in corrispondenza del ginocchio della curva) e il prodotto tra $I\ped{sc}$ e $V\ped{oc}$ (che indicano rispettivamente la corrente di corto circuito per la tensione a vuoto) è chiamato appunto Fill Factor o fattore di riempimento della cella.
 Il FillFactor dà un’indicazione delle prestazioni della cella.
-Quest’ultimo nelle celle al silicio cristallino assume valori generalmente intorno a 0,75 e 0,80. Il FillFactor è anche un parametro di giudizio sul rendimento della cella: elevati valori di questi parametri sono anche indicatori di migliori prestazioni.
+Quest’ultimo nelle celle al silicio cristallino assume valori generalmente intorno a 0,75 e 0,80. Il Fill Factor è anche un parametro di giudizio sul rendimento della cella: elevati valori di questi parametri sono anche indicatori di migliori prestazioni.
 
 \begin{equation}
-	\text{FillFactor} \,=\, \frac{I_m\,\cdot\,V_m}{I\ped{sc}\,\cdot\,V\ped{oc}} \,=\, ...
+	\text{FF} \,=\, \frac{I_m\,\cdot\,V_m}{I\ped{sc}\,\cdot\,V\ped{oc}} \,=\, ...
 \end{equation}
 
-\subsection{Ponte Graetz}
+\subsection*{Ponte Graetz}
 
-In questa parte ell'esperienza abbiamo realizzato un circuito raddrizzatore a ponte di diodi, o ponte di Graetz. Il circuito realizzato è illustrato in Figura \ref{fig:raddrizzatore}, eccetto per la presenza del condensatore, che in questa prima analisi non è utilizzato.
-Per realizzare il ponte di Graetz abbiamo utilizzato quattro diodi 1N4007 e un carico resistivo da $10\,\si{\kilo\ohm}$. Di questo circuito ne andremo a gaficare la forma d'onda risultante e ne misureremo l'ampiezza.
+In questa parte dell'esperienza abbiamo realizzato un circuito raddrizzatore a ponte di diodi, o ponte di Graetz. Il circuito realizzato è illustrato in Figura \ref{fig:raddrizzatore}, eccetto per la presenza del condensatore, che in questa prima analisi non è utilizzato.
+Per realizzare il ponte di Graetz abbiamo utilizzato quattro diodi 1N4007 e un carico resistivo da $10\,\si{\kilo\ohm}$. Andremo a graficare la forma d'onda in uscita dal ponte e ne misureremo l'ampiezza.
 Quello che ci aspettiamo di vedere è un segnale che è la somma di una semionda positiva e di una semionda negtiva capovolta (doppia semionda).
-Infatti questa soluzione, molto usata negli alimentatori, rende molto più semplice il successivo filtraggio e livellamento della tensione fino ad ottenere una corrente continua, non richiedendo peraltro un trasformatore con doppio avvolgimento a presa centrale.
-La forma d'onda che abbiamo ottenuto è la seguente:
+Infatti questa soluzione, molto usata negli alimentatori, rende molto più semplice il successivo filtraggio e livellamento della tensione fino ad ottenere una corrente continua, non richiedendo peraltro un trasformatore con doppio avvolgimento a presa centrale. La forma d'onda che abbiamo visualizzato sull'oscilloscopio è riportata in figura \ref{fig:graetz2}.
 
-\begin{SCfigure}
-    \includegraphics[scale=0.5]{n2_bianco.pdf}
-    \caption{L'immagine, direttamente acquisita dall'osciloscopio, mostra con la lina grigia il segnale in ingresso nel nostro circuito (Figura \ref{fig:raddrizzatore}), mentre la linea nera mostra la forma d'onda in uscita dal nostrocircuito. Come ci si aspettava il seganle negativo viene raddrizzato grazie al ponte di diodi. Si può inoltre notare come l'intensità della tensione sia rimasta la stessa, dal momento che il ponte viene utilizzato solamente come raddrizzatore di corrente e pertanto trasmette completamente il segnale in ingresso.}
+\begin{figure}
+    \includegraphics[width=\textwidth]{n2_bianco.pdf}
+    \caption{L'immagine, direttamente acquisita dall'osciloscopio, mostra con la linea grigia il segnale in ingresso nel nostro circuito (Figura \ref{fig:raddrizzatore}), mentre la linea nera mostra la forma d'onda in uscita dal ponte. Come ci si aspettava il seganle negativo viene raddrizzato grazie al ponte di diodi. Si può inoltre notare come l'intensità della tensione sia rimasta la stessa, dal momento che il ponte viene utilizzato solamente come raddrizzatore di corrente e pertanto trasmette completamente il segnale in ingresso.}
     \label{fig:graetz2}
-\end{SCfigure}
+\end{figure}
 
-Successivamente abbiamo studiato la forma d'onda risultante nel caso in cui si variasse la capacità ($C$) del condensatore. Abiamo misurato la frequenza e l'ampiezza del ripple per quattro valori di capacità. Inoltre sempre per glistessi valori abbiamo misurato la tensione $V\ped{m}$ e abbiamo determinato il fattore di ripple.
+Successivamente abbiamo studiato la forma d'onda risultante nel caso in cui si variasse la capacità ($C$) del condensatore. Abbiamo misurato la frequenza e l'ampiezza del ripple per quattro valori di capacità. Inoltre sempre per gli stessi valori abbiamo misurato la tensione $V\ped{m}$ e abbiamo determinato il fattore di ripple.
 
 \begin{equation}
 	\text{Fattore di ripple} \,=\, \frac{V\ped{r}}{V\ped{m}}
 \end{equation}
-
+%
 dove con $V\ped{r}$ si indica il valore efficace del ripple, ossia dell’ondulazione residua in uscita, mentre con $V\ped{m}$ il valore medio di tensione.
 Ricordiamo che il fattore di ripple è la grandezza che caratterizza la qualità di un alimentatore.
-I risultati che bbiamo ottenuto sono i seguenti:
+I risultati che abbiamo ottenuto sono i seguenti:
 
 %\begin{SCfigure}
 \begin{table}[H]
@@ -80,7 +84,7 @@ I risultati che bbiamo ottenuto sono i seguenti:
 		$ 5.00 \pm 0.05 $ & $ 1.6 \pm 0.1$ & $ 9.07 \pm 0.01 $ & $ 0.18 \pm 0.01$ \\
         \bottomrule
     \end{tabular}
-    \caption{In questa tabella sono riportati i valori della tensione media ($V\ped{m}$), della tensione di ripple ($V\ped{r}$) e del fattore di ripple al variare della capacità. La frequenza del segnale in ingresso stata costante per tutte le misure effettuate ed ha valore di $100\,\si{\hertz}$. }
+    \caption{In questa tabella sono riportati i valori della tensione media ($V\ped{m}$), della tensione di ripple ($V\ped{r}$) e del fattore di ripple al variare della capacità. La frequenza del segnale in ingresso è la frequenza di linea ed ha valore di $50\,\si{\hertz}$. }
     \label{tab:ripple}
 \end{table}
 %\end{SCfigure}
