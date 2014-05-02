@@ -3,10 +3,17 @@
 \subsection{Transistor come interruttore}
 
 In questa sezione vogliamo verificare il corretto funzionamento del circuito illustrato in Figura \ref{fig:}.
-Il circuito comprende un transistor BC107B, un diodo LED, una resistenza $R_c=1\,\si{\kilo\ohm}$ e una resistenza variabile $R_b=100\,\si{\kilo\ohm}$. Il circuito è stato alimentato con una tensione costante in ingresso $V\ped{in}$ di $15\,\si{\volt}$.
+Il circuito comprende un transistor BC107B, un diodo LED, una resistenza $R_c=1\,\si{\kilo\ohm}$ e una resistenza variabile $R_b=100\,\si{\kilo\ohm}$. Il circuito è stato alimentato con una tensione costante in ingresso $V\ped{in}$ di $15\,\si{\volt}$. Inoltre abbiamo prestato attenzione che la corrente passante per il LED non superasse mai i $15\,\si{\milli\ampere}$.
+
 Abbiamo verificato che il transistor si comportasse effettivamente come un interruttore agendo manualmente sul cavo banana-banana che collega $R_b$ con il multimetro digitale. Ovvero abbiamo appurato che, scollegando $R_b$ dal cavo, il LED non si illumina mentre, se $R_b$ e il cavo sono collegati, allora il LED è illuminato.
 
-\subsection{}
+Successivamente abbiamo collegato un amperometro tra $R_b$ e il terminale di base del transistor. In questo modo siamo in grado di osservare come varia la corrente di collettore $I_c$ al variare della resistenza $R_b$. Questo è possibile in quanto il multimetro ci fornisce il valore della corrente di emettitore $I_e$, pertanto sottraendo ad $I_e$ il valore corrispondente di $I_b$ otteniamo il valore della corrente di base $I_b$. Inoltre, grazie a queste misure, possiamo determinare come varia la corrente di base $I_b$ sempre al variare di $R_b$.
+
+I risultati ottenuti sono riportati nei grafici in Figura \ref{fig:} e Figura \ref{fig:}.
+
+\subsection{Transistor come interruttore veloce}
+
+In questa sezione vogliamo verificare che il transistor utilizzato nel circuito riportato in Figura \ref{fig:} funzioni effettivamente come interruttore veloce.
 
 \subsection{}
 
