@@ -3,7 +3,6 @@
 from math import *
 import cmath
 import numpy as np
-from numpy import *
 
 import matplotlib
 from matplotlib import pyplot as plt
