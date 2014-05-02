@@ -5,7 +5,7 @@
 In questa sezione vogliamo verificare il corretto funzionamento del circuito illustrato in Figura \ref{fig:}.
 Il circuito comprende un transistor BC107B, un diodo LED, una resistenza $R_c=1\,\si{\kilo\ohm}$ e una resistenza variabile $R_b=100\,\si{\kilo\ohm}$. Il circuito è stato alimentato con una tensione costante in ingresso $V\ped{in}$ di $15\,\si{\volt}$. Inoltre abbiamo prestato attenzione che la corrente passante per il LED non superasse mai i $15\,\si{\milli\ampere}$.
 
-Abbiamo verificato che il transistor si comportasse effettivamente come un interruttore agendo manualmente sul cavo banana-banana che collega $R_b$ con il multimetro digitale. Ovvero abbiamo appurato che, scollegando $R_b$ dal cavo, il LED non si illumina mentre, se $R_b$ e il cavo sono collegati, allora il LED è illuminato.
+Abbiamo verificato che il transistor si comportasse effettivamente come un interruttore agendo manualmente sul cavo banana-banana che collega $R_b$ con il multimetro digitale. Ovvero abbiamo appurato che, scollegando $R_b$ dal cavo, il LED non si illumina mentre, se $R_b$ e il cavo sono collegati, allora il LED è illuminato. Questo avviene perchè: [Prima studio e poi so spiegare!!!]
 
 Successivamente abbiamo collegato un amperometro tra $R_b$ e il terminale di base del transistor. In questo modo siamo in grado di osservare come varia la corrente di collettore $I_c$ al variare della resistenza $R_b$. Questo è possibile in quanto il multimetro ci fornisce il valore della corrente di emettitore $I_e$, pertanto sottraendo ad $I_e$ il valore corrispondente di $I_b$ otteniamo il valore della corrente di collettore $I_c$. Inoltre, grazie a queste misure, possiamo determinare come varia la corrente di base $I_b$ sempre al variare di $R_b$.
 
@@ -13,13 +13,19 @@ I risultati ottenuti sono riportati nei grafici in Figura \ref{fig:} e Figura \r
 
 \subsection{Transistor come interruttore veloce}
 
-In questa sezione vogliamo verificare che il transistor, utilizzato nel circuito riportato in Figura \ref{fig:}, funzioni effettivamente come interruttore veloce.
+In questa sezione vogliamo verificare che il transistor BC107B, utilizzato nel circuito riportato in Figura \ref{fig:}, funzioni effettivamente come interruttore veloce.
 Come nel caso precedente la tensione in ingresso $V_0$ è costante ed ha un'intensità di $15\,\si{\volt}$. La resistenza $R_c$ ha un valore di $1\,\si{\kilo\ohm}$ mentre la resistenza $R_b$ vale $10\,\si{\kilo\ohm}$. Inoltre per pilotare il terminale di base del transistor vi abbiamo applicato un segnale in ingresso TTL $V\ped{in}$ fornitoci dal generatore di forme d'onda sotto forma di onda quadra di intervallo $0-5\,\si{\volt}$.
 
 Come abbiamo verificato il transistor utilizzato in questo circuito è effettivamente utilizzabile come interruttore veloce. Infatti fino ad una frequenza massima di circa $20\,\si{\kilo\hertz}$ era possibile distinguere chiaramenti gli intervalli in cui il LED si accendeva e si spegneva. Inoltre per frequenze superiori ai $20\,\si{\kilo\hertz}$  si sarebbe potuto verificare il corretto funzionamento del transistor, come interruttre rapido, utilizzando un fotodiodo[???] con cui avremmo appurato che tale componente è utilizzabile anche con frequenze di circa $15\,\si{\mega\hertz}$, range massimo di funzionamento del nostro generatore di onde.
-Il motivo per cui il LED si accende e si spegne è facilmente spiegabile in quanto: [A cosa è dovuto]
+Il motivo per cui il LED si accende e si spegne è facilmente spiegabile in quanto: [A cosa è dovuto!!! Studiare!!!]
 
 \subsection{Emitter follower}
+
+In questa sezione ci proponiamo di montare un circuito emitter follower grazie all'utilizzo di un transistor BC107B nella configurazione illustrata in Figura \ref{fig:}. Inoltre vogliamo anche studiare il segnale in uscita ($V\ped{out}$) da tale circuito rispetto al segnale in ingresso al circuito ($V\ped{in}$).
+
+Le specifiche del circuito utilizzato sono le seguenti: il circuito è alimentato con una differenza di tensione in ingresso $V_0$ di $12\,\si{\volt}$, la resistenza $R_b$ ha un valore di $2\,\si{\kilo\ohm}$, la resistenza $R_e$ vale $4.7\,\si{\kilo\ohm}$. Come segnale in ingresso per il terminale di base del transistor abbiamo usato un segnale sinusoidale con una tensione picco-picco effettiva di $10\,\si{\volt}$. Il segnale in ingresso è stato generato grazie al generatore di forme d'onda.
+
+
 
 \subsection{}
 
