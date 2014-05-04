@@ -25,8 +25,6 @@ Come nel caso precedente la tensione in ingresso $V_0$ è costante ed ha un'inte
 
 Come abbiamo verificato il transistor utilizzato in questo circuito è effettivamente utilizzabile come interruttore veloce. Infatti fino ad una frequenza massima di circa $20\,\si{\kilo\hertz}$ era possibile distinguere chiaramenti gli intervalli in cui il LED si accendeva e si spegneva. Inoltre per frequenze superiori ai $20\,\si{\kilo\hertz}$  si sarebbe potuto verificare il corretto funzionamento del transistor, come interruttre rapido, utilizzando un fotodiodo[???] con cui avremmo appurato che tale componente è utilizzabile anche con frequenze di circa $15\,\si{\mega\hertz}$, range massimo di funzionamento del nostro generatore di onde.
 
-Il motivo per cui il LED si accende e si spegne è facilmente spiegabile in quanto: il terminale emettitore del transistor si trova ad un potenziale di $0\,\si{\volt}$. Quindi affinche possa passare corrente tra la base e l'emettitore occorre che tra queste vi sia una differenza di potenziale di almeno $0.6\,\si{\volt}$. Quindi dal momento che il segnale in ingresso permette sostanzialmente due valori di tensione di base ($V_b$), ovvero 0 e 5 $\si{\volt}$, allora quando $V_b=0\,\si{\volt}$ il ramo base-emettitore non conduce e nel circuito non passa corrente. Al contrario quando $V_b=5\,\si{\volt}$, allora il ramo base-emettitore entra in conduzione e nel circuito passa corrente e pertanto il LED si illumina.
-
 \subsection*{Emitter follower}
 
 In questa sezione ci proponiamo di montare un circuito emitter follower grazie all'utilizzo di un transistor BC107B nella configurazione illustrata nel circuito (c) . Inoltre vogliamo anche studiare il segnale in uscita ($V\ped{out}$) da tale circuito rispetto al segnale in ingresso al circuito ($V\ped{in}$).
@@ -35,6 +33,16 @@ Le specifiche del circuito utilizzato sono le seguenti: il circuito è alimentat
 
 I risultati ottenuti sono riportati nel grafico in Figura \ref{fig:}.
 
-\subsection*{}
+\subsection*{Emitter follower polarizzato}
+
+In questo paragrafo vogliamo studiare il circuito (d). O meglio, vogliamo capire come cambia il segnale in uscita dal circuito ($V\ped{out}$) rispetto al caso precedente (circuito (c)), nel caso in cui l'emettitore sia ad una tensione di $-12\,\si{\volt}$.
+Le componenti del circuito (d) sono le stesse descritte nella sezione precedente.
+
+Il risultato ottenuto è riportato in Figura \ref{fig:}
+
+Inoltre abbiamo verificato l'andamento di $V\ped{out}$ rispetto a $V\ped{in}$ variando quest'ultima. I risultati ottenuti saranno discussi nelle conclusioni di questo elaborato.
 
 \subsection*{}
+
+
+
