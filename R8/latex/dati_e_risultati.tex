@@ -1,0 +1,77 @@
+\section*{Dati e risultati}
+
+\subsection*{Transistor come interruttore}
+
+In questa sezione vogliamo verificare il corretto funzionamento del circuito (a).
+Il circuito comprende un transistor BC107B, un diodo LED, una resistenza $R_c=1\,\si{\kilo\ohm}$ e una resistenza variabile $R_b$ inizialmente uguale a \SI{100}{\kilo\ohm}. Il circuito è stato alimentato con una tensione costante in ingresso $V\ped{in}$ di $15\,\si{\volt}$.
+% non può superare i 15 mA perché ha una resistenza interna di circa 1000 ohm. Se la tensione massima è 15 V il massimo è 15 mA.
+
+Innanzitutto abbiamo verificato che il transistor si comportasse effettivamente come un interruttore, agendo manualmente sull'interruttore (ovvero il cavo banana-banana che collega $R_b$ all'alimentazione). Abbiamo appurato che, scollegando il cavo, il LED non si illumina, mentre se il cavo è collegato, allora il LED è illuminato. Quindi il transistor lascia passare corrente solo se la base è alimentata, come volevamo dimostrare.
+
+Successivamente abbiamo collegato un amperometro tra $R_b$ e il terminale di base del transistor, per misurare $I_b$, e abbiamo misurato $I_e$ con l'alimentatore. In questo modo siamo in grado di osservare come varia la corrente di collettore $I_c = I_e - I_b \simeq I_e$ ($I_b \ll I_e$) al variare della resistenza $R_b$ o della corrente di base $I_b$.
+
+I risultati ottenuti sono riportati nel grafico in Figura \ref{fig:a}
+
+\begin{SCfigure}
+    \includegraphics[scale=0.65]{a.pdf}
+    \caption{Il grafico
+mostra la dipendenza
+della corrente di collettore dalla corrente di
+base. Nella prima parte del grafico si vede
+che 
+$I_c$ dipende circa linearmente da $I_b$ con
+un amplificazione $\beta \simeq
+350$. Quando la corrente $I_c$ giunge
+a circa 12 mA, il transistor entra in saturazione, cioé la corrente di collettore diventa
+indipendente da quella di base e resta circa
+costante.}
+    \label{fig:a}
+\end{SCfigure}
+
+\subsection*{Transistor come interruttore veloce}
+
+In questa sezione vogliamo verificare che il transistor BC107B, utilizzato nel circuito (b), funzioni effettivamente come interruttore veloce.
+Come nel caso precedente la tensione in ingresso $V_0$ è costante ed ha un'intensità di $15\,\si{\volt}$. La resistenza $R_c$ ha un valore di $1\,\si{\kilo\ohm}$ mentre la resistenza $R_b$ vale $10\,\si{\kilo\ohm}$. Inoltre per pilotare il terminale di base del transistor vi abbiamo applicato un segnale in ingresso TTL $V\ped{in}$ fornitoci dal generatore di forme d'onda sotto forma di onda quadra di intervallo $0-5\,\si{\volt}$.
+
+Come abbiamo verificato il transistor utilizzato in questo circuito è effettivamente utilizzabile come interruttore veloce. Infatti fino ad una frequenza massima di circa $20\,\si{\kilo\hertz}$ era possibile distinguere chiaramenti gli intervalli in cui il LED si accendeva e si spegneva. Inoltre per frequenze superiori ai $20\,\si{\kilo\hertz}$  si sarebbe potuto verificare il corretto funzionamento del transistor, come interruttre rapido, utilizzando un fotodiodo[???] con cui avremmo appurato che tale componente è utilizzabile anche con frequenze di circa $15\,\si{\mega\hertz}$, range massimo di funzionamento del nostro generatore di onde.
+
+\subsection*{Emitter follower}
+
+In questa sezione ci proponiamo di montare un circuito emitter follower grazie all'utilizzo di un transistor BC107B nella configurazione illustrata nel circuito (c) . Inoltre vogliamo anche studiare il segnale in uscita ($V\ped{out}$) da tale circuito rispetto al segnale in ingresso al circuito ($V\ped{in}$).
+
+Le specifiche del circuito utilizzato sono le seguenti: il circuito è alimentato con una differenza di tensione in ingresso $V_0$ di $12\,\si{\volt}$, la resistenza $R_b$ ha un valore di $2\,\si{\kilo\ohm}$, la resistenza $R_e$ vale $4.7\,\si{\kilo\ohm}$. Come segnale in ingresso per il terminale di base del transistor abbiamo usato un segnale sinusoidale con una tensione picco-picco effettiva di $10\,\si{\volt}$. Il segnale in ingresso ($V\ped{in}$) è stato generato grazie al generatore di forme d'onda.
+
+I risultati ottenuti sono riportati nel grafico in Figura \ref{fig:}.
+
+\subsection*{Emitter follower polarizzato}
+
+In questo paragrafo vogliamo studiare il circuito (d). O meglio, vogliamo capire come cambia il segnale in uscita dal circuito ($V\ped{out}$) rispetto al caso precedente (circuito (c)), nel caso in cui l'emettitore sia ad una tensione di $-12\,\si{\volt}$.
+Le componenti del circuito (d) sono le stesse descritte nella sezione precedente.
+
+Il risultato ottenuto è riportato in Figura \ref{fig:}
+
+Inoltre abbiamo verificato l'andamento di $V\ped{out}$ rispetto a $V\ped{in}$ variando quest'ultima. I risultati ottenuti saranno discussi nelle conclusioni di questo elaborato.
+
+\subsection*{Emitter follower come partitore di tensione}
+
+In questa ultima sezione dimensioneremo e studieremo il circuito (e). Le componenti utilizzate sono le seguenti: la resistenza di emettitore $R_e$ di valore $4.7\,\si{\kilo\ohm}$, la capacità $C_1=1\,\si{\micro\farad}$ e come segnale in ingresso ($V\ped{in}$) utilizziamo un'onda sinusoidale con una tensione picco-picco di $4\,\si{\volt}$, generata grazie al generatore di forme d'onda.
+Per dimensionare il circuito dobbiamo tenere conto delle indicazioni forniteci, ovvero che la tensione di emettitore ($V_e$) deve essere $\frac{V_c}{2}$ dove $V_c$ rappresenta la tensione di collettore.
+
+Pertanto abbiamo deciso che una scelta intelligente sarebbe stata quella di porre $R_1=1\,\si{\kilo\ohm}$, anche per facilitare i calcoli. Una volta stabilito il valore di $R_1$ possimo ricavare algebricamente il valore di $R_2$ mediante un'analisi circuitale.
+A tal fine abbiamo osservato che $V_e$ vale $6\,\si{\volt}$, pertanto $V_b$ deve trovarsi ad una tensione di $6.6\,\si{\volt}$ (dal momento che base ed emettitore sono una giunzione p-n, in silicio, la caduta di potenziale in diretta è di circa $0.6\,\si{\volt}$). Quindi possiamo osservare che la differenza di potenziale tra $V_0=12\,\si{\volt}$ e $V_b$ e uguale a $5.4\,\si{\volt}$.
+Dal momento che il partitore è in parallelo con il ramo del circuito appena analizzato le differenze di potenziale sono le stesse e quindi possiamo avvalerci della nota equazione per un partitore:
+
+\begin{equation}
+        V_b\,=\,V\ped{0}\cdot\frac{R_2}{R_1+R_2}
+\end{equation}
+
+e pertanto si ottiene che:
+
+\begin{equation}
+        R_2\,=\,R_1\cdot\frac{V_b}{V_0-V_b} \,\simeq\, 1220\,\si{\ohm}
+\end{equation}
+
+dove $V_b$ e la tensione di base che vale $6.6\,\si{\volt}$, $V_0$ è la tensione in ingresso al circuito che vale $12\,\si{\volt}$.
+Infine abbiamo scelto $C_2=XXX\,\si{\micro\farad}$ in modo da non limitare la banda passante del circuito. La capacità è stata scelta tra uno slot di valori possibili, quindi si è andati per tentativi e si è tenuto il capacitore che ha dato i migliori risultati.
+
+Infine vogliamo studiare l' andamento di $V\ped{out}$ al variare dell'ampiezza ed in particolar modo della frequenza del seganle in ingresso $V\ped{in}$. Uno dei risultati ottenuti è riportato nella Figura \ref{fig:}
