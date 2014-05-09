@@ -32,3 +32,16 @@ dove $R\ped{eq}$ è il parallelo tra le resistenze $R_1$ e $R_2$.
 Sfruttando l'osciloscopio ne abbiamo verificato il funzionamento e il risultato ottenuto è riportato in Figura \ref{fig:}.
 
 \subsection*{Caratteristica in uscita del transistor BC107B}
+
+In questa ultima sezione abbiamo montato il circuito riportato in Figura \ref{fig:}. La resistenza di emettitore $R_e$ ha un valore di $\SI{10}{\ohm}$ mentre la resistenza di base $R_b$ ha un valore di $\SI{100}{\kilo\ohm}$. Abbiamo utilizzato come segnale in ingresso ($V\ped{in}$) un'onda sinusoidale di frequenza ($\nu$) pari a $\SI{1}{\kilo\hertz}$ con una tensione picco-picco di $\SI{10}{\volt}$ ed un offset pari a $+\SI{5}{\volt}$ DC.
+Quindi per studiare la caratteristica di uscita del transistor abbiamo utilizzato l'oscilloscopio e abbiamo acquisito tale caratteristica per differenti valori della corrente di base $I_b$ variando la tensione di base ($V_b$). In particolare siamo partiti da una corente minima di base di $\SI{10}{\micro\ampere}$ fino ad arrivare ad una $I_b$ massima di $\SI{90}{\micro\ampere}$ a step di $\SI{10}{\micro\ampere}$.
+
+Il risultato ottenuto è riportato in Figura \ref{fig:}.
+
+Infine abbiamo calcolato per ciascun valore di $I_b$ ilcoefficiente di guadagno in corrente $\beta$ per il valore di tensione di $\SI{5}{\volt}$. Quindi sfruttando la relazione che lega $\beta$ con la corrente di collettore $I_c$ (nota) e la corrente di base $I_b$:
+
+\begin{equation}
+	\beta \,=\, \frac{I_c}{I_b}
+\end{equation}
+
+abbiamo ottenuto i risultati riportati in Tabella \ref{tab:}.
