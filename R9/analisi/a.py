@@ -16,12 +16,16 @@ for i in range(9):
 x = np.array(tx)
 y = np.array(ty)
 
+v5 = []
 mxs = []
 mys = []
 for ax, ay in zip(x, y):
     mx = []
     my = []
     for ex, ey in zip(ax, ay):
+        if  4.99 < ex < 5.01:
+            print(ex, ey)
+        
         if ex in mx:
             my[mx.index(ex)].append(ey)
         else:

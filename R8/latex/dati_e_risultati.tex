@@ -35,22 +35,39 @@ Come nel caso precedente la tensione in ingresso $V_0$ è costante ed ha un'inte
 
 Come abbiamo verificato il transistor utilizzato in questo circuito è effettivamente utilizzabile come interruttore veloce. Infatti fino ad una frequenza massima di circa $20\,\si{\kilo\hertz}$ era possibile distinguere chiaramenti gli intervalli in cui il LED si accendeva e si spegneva. Inoltre per frequenze superiori ai $20\,\si{\kilo\hertz}$  si sarebbe potuto verificare il corretto funzionamento del transistor, come interruttre rapido, utilizzando un fotodiodo[???] con cui avremmo appurato che tale componente è utilizzabile anche con frequenze di circa $15\,\si{\mega\hertz}$, range massimo di funzionamento del nostro generatore di onde.
 
+\begin{SCfigure}[1][t]
+    \includegraphics[width=0.77\textwidth]{emitter.png}
+    \caption{La figura mostra le tensioni in ingresso (nero) e in uscita (grigio) per l’emitter follower del circuito (c). Si può notare che la tensione in uscita è sempre
+0.5 V più
+u bassa rispetto a
+quella in entrata, a causa della caduta in diretta tra base ed emettitore. Inoltre è evidente il clipping: la giunzione base-emettitore è inderdetta quando il segnale in ingresso è inferiore a 0.5 V.}
+    \label{fig:emitter}
+\end{SCfigure}
+
 \subsection*{Emitter follower}
 
 In questa sezione ci proponiamo di montare un circuito emitter follower grazie all'utilizzo di un transistor BC107B nella configurazione illustrata nel circuito (c) . Inoltre vogliamo anche studiare il segnale in uscita ($V\ped{out}$) da tale circuito rispetto al segnale in ingresso al circuito ($V\ped{in}$).
 
 Le specifiche del circuito utilizzato sono le seguenti: il circuito è alimentato con una differenza di tensione in ingresso $V_0$ di $12\,\si{\volt}$, la resistenza $R_b$ ha un valore di $2\,\si{\kilo\ohm}$, la resistenza $R_e$ vale $4.7\,\si{\kilo\ohm}$. Come segnale in ingresso per il terminale di base del transistor abbiamo usato un segnale sinusoidale con una tensione picco-picco effettiva di $10\,\si{\volt}$. Il segnale in ingresso ($V\ped{in}$) è stato generato grazie al generatore di forme d'onda.
 
-I risultati ottenuti sono riportati nel grafico in Figura \ref{fig:}.
+I risultati ottenuti sono riportati nel grafico in Figura \ref{fig:emitter}.
 
 \subsection*{Emitter follower polarizzato}
 
 In questo paragrafo vogliamo studiare il circuito (d). O meglio, vogliamo capire come cambia il segnale in uscita dal circuito ($V\ped{out}$) rispetto al caso precedente (circuito (c)), nel caso in cui l'emettitore sia ad una tensione di $-12\,\si{\volt}$.
 Le componenti del circuito (d) sono le stesse descritte nella sezione precedente.
 
-Il risultato ottenuto è riportato in Figura \ref{fig:}
-
+Il risultato ottenuto è riportato in Figura \ref{fig:emitter_p}
 Inoltre abbiamo verificato l'andamento di $V\ped{out}$ rispetto a $V\ped{in}$ variando quest'ultima. I risultati ottenuti saranno discussi nelle conclusioni di questo elaborato.
+
+\begin{SCfigure}[1][b!]
+    \includegraphics[width=0.77\textwidth]{emitter_b.png}
+    \caption{La figura mostra le tensioni in ingresso (nero) e in uscita (grigio) per l’emitter follower del circuito (c). Si può notare che la tensione in uscita è sempre
+0.5 V più
+u bassa rispetto a
+quella in entrata, a causa della caduta in diretta tra base ed emettitore. Inoltre è evidente il clipping: la giunzione base-emettitore è inderdetta quando il segnale in ingresso è inferiore a 0.5 V.}
+    \label{fig:emitter_p}
+\end{SCfigure}
 
 \subsection*{Emitter follower come partitore di tensione}
 
