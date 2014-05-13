@@ -52,7 +52,7 @@
     \put(0,0){\includegraphics[width=\unitlength]{s2.pdf}}%
     \put(0.28157095,0.23906792){\makebox(0,0)[lb]{\smash{$R_2$}}}%
     \put(0.58484512,0.23797806){\makebox(0,0)[lb]{\smash{$R_e$}}}%
-    \put(0.27255604,0.70757049){\makebox(0,0)[lb]{\smash{$R_2$}}}%
+    \put(0.27255604,0.70757049){\makebox(0,0)[lb]{\smash{$R_1$}}}%
     \put(0.58484512,0.70430084){\makebox(0,0)[lb]{\smash{$R_c$}}}%
     \put(0.23731126,0.53098576){\makebox(0,0)[lb]{\smash{C}}}%
     \put(-0.0011041,0.24374133){\makebox(0,0)[lb]{\smash{V}}}%
