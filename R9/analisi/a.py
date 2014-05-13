@@ -46,8 +46,9 @@ Ib = unp.uarray([1, 2, 3, 4, 5, 6, 7, 8, 9], [0.01, 0.01, 0.01, 0.01, 0.01, 0.01
 Ic = []
 for ibx, iby in zip(mxs, mys):
     for x, y in zip(ibx, iby):
-        if 5 < x < 5.07:
+        if 4.95 < x < 5.05:
             Ic.append(y/10)
+            break
 
 Ic = unp.uarray(Ic, np.array(Ic) * 0.01)
 beta = Ic / Ib
@@ -74,7 +75,10 @@ lines = []
 for i in range(9):
     lines.append(ax1.errorbar(x=mxs[i], y=mys[i]*100.0,
         fmt='-', c='black', linewidth=3))
-    
+
+#lines.append(ax1.errorbar(x=unp.nominal_values(Ib)*1e6, y=unp.nominal_values(beta),
+#        fmt='-', c='black', linewidth=3))
+
 ax1.set_xlabel(u'Tensione $V_{ce}$ [V]',
     labelpad=12, fontsize=16)
 ax1.set_ylabel(u'Corrente $I_c$ [mA]',
@@ -91,12 +95,12 @@ ax1.set_xlim((0, 10))
 ax1.text(8.5, 5.5, u"$I_b$ = 10 μA")
 ax1.text(8.8, 10, u"20 μA")
 ax1.text(8.5, 15, u"30 μA")
-ax1.text(8.3, 20, u"40 μA")
-ax1.text(8, 25, u"50 μA")
-ax1.text(7.7, 30.5, u"60 μA")
-ax1.text(7.5, 35.5, u"70 μA")
-ax1.text(7.2, 40.5, u"80 μA")
-ax1.text(7, 45.2, u"90 μA")
+ax1.text(8.2, 20, u"40 μA")
+ax1.text(7.8, 25, u"50 μA")
+ax1.text(7.5, 30.5, u"60 μA")
+ax1.text(7.2, 35.5, u"70 μA")
+ax1.text(6.9, 40.5, u"80 μA")
+ax1.text(6.6, 45.2, u"90 μA")
 
 # questo imposta i bordi del grafico
 f1.subplots_adjust(left=0.1, right=0.97,
