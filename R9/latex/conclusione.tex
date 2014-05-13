@@ -2,10 +2,14 @@
 
 \subsection*{Sorgente di corrente costante}
 
-
+Grazie al grafico illustrato in Figura \ref{fig:curr} abbiamo verificato che il circuito realizzato si comporta come una sorgente di corrente costante per valori di $R_c$ che appartengono all'intervallo tra $\SI{0}{\kilo\ohm}$ e $\SI{8}{\kilo\ohm}$. Inoltre possiamo notare, sempre facendo riferimento al grafico sopracitato, che per valori di $R_c$ maggiori a $\SI{8}{\kilo\ohm}$ l'intensità di corrente di collettore $I_c$ va via via diminuendo.
 
 \subsection*{Amplificatore ad emettitore comune}
 
-
+Per quanto riguarda lo studio del circuito illustrato in Figura \ref{fig:ampli} facciamo notare che la discussione sul dimensionamento dello stesso è riportata in modo accurato nella descrizione eseguita nella sezione precedente. Pertanto non ci resta che discutere del suo corretto funzionamento avvalendoci dell'immagine in Figura \ref{fig:amp}. Come è possibile notare le tensioni sono sfasate di 180$^\circ$ e la tensione in uscita ($V\ped{out}$) è alzata di 5.9 V, valore che in base a puri calcoli algebrigi sarebbe dovuto essere di $\SI{5.5}{\volt}$ rispetto al segnale in ingresso ($V\ped{in}$).
+Inoltre è possibile notare che il segnale in uscita ($V\ped{out}$) è amplificato di circa 10 volte rispetto al segnale in entrata.
+E` possibile anche notare il fenomeno del clipping, infatti $V\ped{out}$ non può superare i 10 V (linea tratteggiata) e non può scendere sotto 1 V a cui si somma la tensione istantanea della base ($V\ped{in}$). Per questo motivo si vede che nella zona di clipping inferiore la d.d.p. non è costante ma segue il profilo della tensione in ingresso.
 
 \subsection*{Caratteristica in uscita del transistor BC107B}
+
+Per quanto riguarda lo studio del circuito in Figura \ref{fig:transistor} possiamo dire che
