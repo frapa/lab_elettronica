@@ -2,8 +2,11 @@
 
 \begin{SCfigure}[1][t!]
 	\centering
-	\includegraphics[width=0.75\textwidth]{current.pdf}
-	\caption{}
+	\includegraphics[width=0.72\textwidth]{current.pdf}
+	\caption{Il grafico illustra la corrente in funzione della resistenza del carico per il circuito
+	    \ref{fig:corr_cost}. Questo semplice circuito si comporta come una sorgente di corrente costante (1 mA)
+	    per resistenze di carico fino a circa \SI{8}{\kilo\ohm}. Dopo questa soglia la corrente inizia a diventare
+	    dipendente dal carico. Le incertezze non sono riportate in quanto non visibili sul grafico.}
 	\label{fig:curr}
 \end{SCfigure}
 
@@ -26,8 +29,8 @@ Infine abbiamo acquisito un grafico della corrente di collettore $I_c$ al variar
 
 In questa sezione abbiamo montato e dimensionato il circuito in Figura \ref{fig:ampli}. I requisiti che deve avere il nostro circuito sono quelli di avere una tensione di collettore ($V_0$) di $\SI{10}{\volt}$, una corrente di quiescenza di circa $\SI{1}{\milli\ampere}$ e un guadagno $G$ di $-10$. Inoltre il circuito è alimentato da un segnale in ingresso ($V\ped{in}$) sinusodale di frequenza ($\nu$) $\SI{1}{\kilo\hertz}$.
 
-Noi sappiamo che in regime di quiescenza lungo il ramo collettore-emettitore scorre una corrente di $\SI{1}{\milli\ampere}$. Scegliendo $R_e = \SI{500}{\ohm}$ (questo valore ci permette poi di avere un guadagno $G = -10$), si ha $V_e = 0.5 V$ e $V_b = V_e + 0.6 V  = 1.1 V$, quindi per ottenere un uscita con un clamping simmetrico si deve avere, in quiescienza, $V\ped{out} = V_b + (V_0 - V_b)/2 \simeq 5.5 V$.
-Inoltre poichè vogliamo che il guadagno, definito come $G\,=\,-R_c/R_e$, sia di -10 possiamo ricavare grazie alle leggi di Ohm il valore di $R_c = \SI{5}{\kilo\ohm}$. In questo modo risulta che, in quiescienza, $V\ped{out} = 5 V$.
+Noi sappiamo che in regime di quiescenza lungo il ramo collettore-emettitore scorre una corrente di $\SI{1}{\milli\ampere}$. Scegliendo $R_e = \SI{500}{\ohm}$ (questo valore ci permette poi di avere un guadagno $G = -10$), si ha $V_e = 0.5$ V e $V_b = V_e + 0.6 V  = 1.1$ V, quindi per ottenere un uscita con un clamping simmetrico (in modo che sia massimo l'intervallo per cui il segnale non viene tagliato) si deve avere, in quiescienza, $V\ped{out} = V_b + (V_0 - V_b)/2 \simeq 5.5$ V.
+Inoltre poichè vogliamo che il guadagno, definito come $G\,=\,-R_c/R_e$, sia di -10 possiamo ricavare grazie alle leggi di Ohm il valore di $R_c = \SI{5}{\kilo\ohm}$. In questo modo risulta che, in quiescienza, $V\ped{out} = 5$ V.
 
 Infine sfruttando le stesse considerazioni fatte nella sezione precedente otteniamo i valori di $R_1$ e $R_2$ che sono risultati essere $R_1=\SI{80}{\kilo\ohm}$ e $R_e=\SI{10}{\kilo\ohm}$.
 Infine abbiamo determinato il valore di capacità ($C$) sfruttando la relazione che lo lega alla frequenza di risonanza ($\nu$) del filtro passa-altro formato da $C$ e $R_1$ e $R_2$.
@@ -58,6 +61,7 @@ In questa ultima sezione abbiamo montato il circuito riportato in Figura \ref{fi
 Quindi per studiare la caratteristica di uscita del transistor abbiamo utilizzato l'oscilloscopio e abbiamo acquisito tale caratteristica per differenti valori della corrente di base $I_b$ variando la tensione di base ($V_b$). In particolare siamo partiti da una corrente minima di base di $\SI{10}{\micro\ampere}$ fino ad arrivare ad una $I_b$ massima di $\SI{90}{\micro\ampere}$ a step di $\SI{10}{\micro\ampere}$.
 
 Il risultato ottenuto è riportato in Figura \ref{fig:cara}.
+Infine abbiamo calcolato per ciascun valore di $I_b$ il coefficiente di guadagno in corrente $\beta$ per il valore di tensione $V\ped{ce}=\SI{5}{\volt}$. Quindi sfruttando la relazione che lega $\beta$ con la corrente di collettore $I_c$ (nota) e la corrente di base $I_b$:
 
 \begin{SCfigure}[1][t!]
 	\centering
@@ -66,35 +70,25 @@ Il risultato ottenuto è riportato in Figura \ref{fig:cara}.
 	\label{fig:cara}
 \end{SCfigure}
 
-Infine abbiamo calcolato per ciascun valore di $I_b$ il coefficiente di guadagno in corrente $\beta$ per il valore di tensione $V\ped{ce}=\SI{5}{\volt}$. Quindi sfruttando la relazione che lega $\beta$ con la corrente di collettore $I_c$ (nota) e la corrente di base $I_b$:
-
 \begin{equation}
 	\beta \,=\, \frac{I_c}{I_b}
 \end{equation}
 
-abbiamo ottenuto i risultati riportati in Tabella \ref{tab:}.
+abbiamo ottenuto i risultati riportati in Tabella \ref{tab:tab}.
 
-\begin{table}
+\begin{table}[h]
     \centering
-    \begin{tabular}{l c c}
+    \[
+    \begin{array}{l | c c c c c c c c c | c}
         \toprule
-        &$\beta$ & $\delta\beta$ \\
-        \midrule
-        & 422 & 6 \\
-        & 448 & 5 \\
-        & 448 & 5 \\
-        & 460 & 5 \\
-        & 473 & 5 \\
-        & 477 & 5 \\
-        & 482 & 5 \\
-        & 485 & 5 \\
-        & 483 & 5 \\
-        \midrule
-        Media & 464 & 2 \\
+        I_b [\mu\text{A}] & 10 & 20 & 30 & 40 & 50 & 60 & 70 & 80 & 90 & \text{Media} \\
+        \midrule 
+        \beta & 422 & 442 & 452 & 464 & 475 & 482 & 484 & 489 & 487 & 466 \\
+        \delta\beta & 6 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 2 \\
         \bottomrule
-    \end{tabular}
-<<<<<<< HEAD
+    \end{array}\]
+    \caption{La tabella riporta il coefficiente di amplificazione del transistor per i valori di $I_b$ che abbiamo
+        misurato. Gli errori sono errori standard di risoluzione. L'amplificazione aumenta
+        all'aumentare della corrente di base.}
+    \label{tab:tab}
 \end{table}
-=======
-\end{table}
->>>>>>> fd2c2bedc6ee3414a2f58af16db19c2c6e83bb8f
