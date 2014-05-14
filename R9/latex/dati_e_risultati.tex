@@ -65,8 +65,18 @@ Infine abbiamo calcolato per ciascun valore di $I_b$ il coefficiente di guadagno
 
 \begin{SCfigure}[1][t!]
 	\centering
-	\includegraphics[width=0.75\textwidth]{transistor.pdf}
-	\caption{}
+	\includegraphics[width=0.7\textwidth]{transistor.pdf}
+	\caption{L'immagine illustra la caratteristica del nostro transistor BC107B. Dal grafico si vedono bene le aree
+	    tipiche di funzionamento di un transistor. La zona vicino all'asse delle ascisse è la regione di interdizione,
+	    poichè non essendoci corrente di base il transistor non conduce. La regione centrale è la regione attiva,
+	    dove il transistor si comporta approssimativamente come un amplificatore di corrente. Variando $I_b$,
+	    $I_c$ viene amplificata di un fattore circa 450 (vedi tabella \ref{tab:tab}), in maniera quasi indipendente
+	    dalla tensione $V_{ce}$.
+	    La zona vicina all'asse delle ordinate invece è la regione di saturazione del transistor,
+	    dove la tensione di base e di collettore non sono più correlate in modo semplice.
+	    Di solito un transistor
+	    viene utilizzato su una retta che taglia il grafico obliquamente passante per la regione
+	    di saturazione e quella di interdizione.}
 	\label{fig:cara}
 \end{SCfigure}
 
@@ -91,5 +101,4 @@ abbiamo ottenuto i risultati riportati in Tabella \ref{tab:tab}.
         misurato. Gli errori sono errori standard di risoluzione. L'amplificazione aumenta
         all'aumentare della corrente di base.}
     \label{tab:tab}
-    \end{tabular}
 \end{table}
