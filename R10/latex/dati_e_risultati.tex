@@ -2,17 +2,64 @@
 
 \subsection*{Amplificatore alle diffrenze}
 
-Lo scopo di questa prima parte è quello di montare un amplificatore alle diffrenze con le seguenti caratteristiche: la corrente di quiescenza $I^q$ deve valere $\SI{0.5}{\milli\ampere}$, un guadagno alle differenze $G\ped{diff} \simeq 30$ e un guadagno in modo comune $G\ped{cm} \simeq 1$.
-A tal fine abbiamo posto i seguenti valori per le resistenze: $R\ped{e1} = \SI{120}{\ohm}$, $R\ped{e2} = \SI{120}{\ohm}$, $R\ped{c2} = \SI{10}{\kilo\ohm}$ ed infine $R\ped{1} = \SI{10}{\kilo\ohm}$. Inoltre il circuito è alimentato con una tensione di collettore $V\ped{cc}$ di $\SI{15}{\volt}$ e una tensione di emettitore $V\ped{ee}$ di $\SI{-15}{\volt}$.
-Inoltre abbiamo alimentato l'amplificatore con una tensione picco-picco $V\ped{in} = \SI{300}{\milli\volt}$ in entrata dal canale 1.
-Quindi a circuito montato andremo a verificarne il funzionamento e ne misureremo il fattore di reiezione a modo comune (CMRR) sia sperimentalmente che teoricamente.
+Lo scopo di questa prima parte è quello di montare un amplificatore alle diffrenze, Figura \ref{fig:}, con le seguenti caratteristiche: la corrente di quiescenza $I^q=\SI{0.5}{\milli\ampere}$, un guadagno alle differenze $G\ped{diff} \simeq 30$ e un guadagno in modo comune $G\ped{cm} \simeq 1$.
+A tal fine abbiamo posto i seguenti valori per le resistenze: $R\ped{e1} = \SI{120}{\ohm}$, $R\ped{e2} = \SI{120}{\ohm}$, $R\ped{c} = \SI{10}{\kilo\ohm}$ che è la resistenza di collettore ed infine $R\ped{1} = \SI{10}{\kilo\ohm}$. Il circuito è alimentato con una tensione di collettore $V\ped{cc}$ di $\SI{15}{\volt}$ e una tensione di emettitore $V\ped{ee}$ di $\SI{-15}{\volt}$.
+Inoltre abbiamo alimentato l'amplificatore con una tensione picco-picco $V\ped{in} = \SI{300}{\milli\volt}$ in entrata dal transistor 1, mentre il transistor 2 è posto a terra.
+Quindi, a circuito montato, andremo a verificarne il funzionamento e ne misureremo il fattore di reiezione a modo comune (CMRR).
 Sperimentalmente si ottiene che:
 
 \begin{equation}
-	G\ped{diff.exp}\,=\,\frac{V\ped{out}}{V_2-V_1}\,=\, XXX \qquad G\ped{cm.exp}\,=\,-\frac{V\ped{out}}{V\ped{in}}\,=\, XXX
-\end{equation}
-\begin{equation}
-	CMRR\,=\,\frac{G\ped{diff.exp}}{G\ped{cm.exp}}\,=\, XXX
+	G\ped{diff}\,=\,\frac{V\ped{out}}{V_2-V_1}\,=\, XXX \qquad\qquad G\ped{cm}\,=\,-\frac{V\ped{out}}{V\ped{in}}\,=\, XXX
+	\label{eq:G}
 \end{equation}
 
+\begin{equation}
+	CMRR\,=\,\frac{G\ped{diff}}{G\ped{cm}}\,=\, XXX
+	\label{eq:cmrr}
+\end{equation}
+
+dove con $V\ped{out}$ si intende la tensione in uscita dal circuito, $V_2$ è la tensione del terminale di base del transistor 2, $V_1$ quella del transistor 1 e $V\ped{in}$ è il segnale sinusoidale in ingresso dal terminale di base del transistor 1.
+Una volta ottenuto il fattore di reiezione a modo comune possimo stimare la resistenza intrinseca dell'emettitore in quanto:
+
+\begin{equation}
+	CMRR\,=\,\frac{G\ped{diff}}{G\ped{cm}}\,\simeq\,\frac{R_1}{R_e + r_e}
+\end{equation}
+
+e quindi otteniamo che:
+
+\begin{equation}
+	r_e\,=\,\frac{R_1}{CMRR}-R_e\,=\, XXX
+\end{equation}
+
+dove con $R_e$ abbiamo indicato il valore della resistenza $R\ped{e1}$ che d'altronde è uguale a $R\ped{e2}$ e pertanto per non appesantire la notazione le abbiamo chiamate $R_e$. Mentre $r_e$ non è altro che la resistenza intrinseca dell'emettitore del transistor 2.
+Infine riportaiamo in Figura \ref{fig:} uno screenshot dell'oscilloscopio che illustra l'andamento della tensione in uscita $V\ped{out}$ e allo stesso tempo anche l'andamento della tensione in ingresso $V\ped{in}$.
+
 \subsection*{Amplificatore alle differenze con sorgente di corrente}
+
+In questa seconda sezione vogliamo montare e studiare un amplificatore alle differenze con sorgente di corrente, Figura \ref{fig:}.
+Le caratteristiche di questo circuito sono le seguenti: la resistenza di collettore $R_c$ vale $\SI{10}{\kilo\ohm}$, le due resistenze di emettitore per i transistor 1 e 2 hanno lo stesso valore $R_e = \SI{120}{\ohm}$, mentre quella del transistor 3 vale $R\ped{e3} = \SI{1.5}{\kilo\ohm}$ ed infine $R_1 = \SI{33}{\kilo\ohm}$ e $R_2 = \SI{10}{\kilo\ohm}$.
+Il circuito è posto tra una differenza di potenziale $\SI{+15}{\volt}$ e $\SI{-15}{\volt}$, inoltre, come nel caso precedente, il transistor 1 è alimentato con una tensione picco-picco $V\ped{in} = \SI{300}{\milli\volt}$ mentre il terminale di base del trensistor 3 è messo a terra come quello del transistor 2.
+
+Anche per questo circuito abbiamo valutato il guadagno diffrenziale ($G\ped{diff}$), il guadagno in modo comune ($G\ped{cm}$) ed infine il fattore di reiezione a modo comune (CMRR). Sfruttando le relazioni riportate nella sezione precedente (\ref{eq:G}) e (\ref{eq:cmrr}) abbimo ottenuto quanto segue:
+
+\begin{equation}
+	G\ped{diff}\,=\, XXX \qquad\qquad G\ped{cm}\,=\, XXX
+\end{equation}
+
+\begin{equation}
+	CMRR\,=\,\frac{G\ped{diff}}{G\ped{cm}}\,=\, XXX
+\end{equation}
+
+Infine riportiamo un'immagine, Figura \ref{fig:}, dell'oscilloscopio che illustra l'andamento del segnale in uscita $V\ped{out}$ e in ingresso $V\ped{in}$ dal nostro amplificatore.
+
+
+
+
+
+
+
+
+
+
+
+
