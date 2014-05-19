@@ -2,15 +2,20 @@
 
 \subsection*{Sorgente di corrente costante}
 
-Grazie al grafico illustrato in Figura \ref{fig:curr} abbiamo verificato che il circuito realizzato si comporta come una sorgente di corrente costante per valori di $R_c$ che appartengono all'intervallo tra $\SI{0}{\kilo\ohm}$ e $\SI{8}{\kilo\ohm}$. Inoltre possiamo notare, sempre facendo riferimento al grafico sopracitato, che per valori di $R_c$ maggiori a $\SI{8}{\kilo\ohm}$ l'intensità di corrente di collettore $I_c$ va via via diminuendo.
+Grazie al grafico illustrato in Figura \ref{fig:curr} abbiamo verificato che il circuito realizzato si comporta come una sorgente di corrente costante per valori di $R_c$ che appartengono all'intervallo tra $\SI{0}{\kilo\ohm}$ e $\SI{8}{\kilo\ohm}$.
+
+Siamo anche riusciti a spiegare l'andamento della corrente nella regione dove essa non è costante. Possiamo
+quindi dire di avere una buona comprensione del funzionamento del circuito.
 
 \subsection*{Amplificatore ad emettitore comune}
 
-Per quanto riguarda lo studio del circuito illustrato in Figura \ref{fig:ampli} facciamo notare che la discussione sul dimensionamento dello stesso è riportata in modo accurato nella descrizione eseguita nella sezione precedente. Pertanto non ci resta che discutere del suo corretto funzionamento avvalendoci dell'immagine in Figura \ref{fig:amp}. Come è possibile notare le tensioni sono sfasate di 180$^\circ$ e la tensione in uscita ($V\ped{out}$) è alzata di 5.9 V, valore che in base a puri calcoli algebrigi sarebbe dovuto essere di $\SI{5.5}{\volt}$ rispetto al segnale in ingresso ($V\ped{in}$).
-Inoltre è possibile notare che il segnale in uscita ($V\ped{out}$) è amplificato di circa 10 volte rispetto al segnale in entrata.
-E` possibile anche notare il fenomeno del clipping, infatti $V\ped{out}$ non può superare i 10 V (linea tratteggiata) e non può scendere sotto 1 V a cui si somma la tensione istantanea della base ($V\ped{in}$). Per questo motivo si vede che nella zona di clipping inferiore la d.d.p. non è costante ma segue il profilo della tensione in ingresso.
+Riguardo al circuito \ref{fig:ampli}, non ci resta che discutere del suo corretto funzionamento avvalendoci dell'immagine in Figura \ref{fig:amp}. Come è possibile notare la tensione $V\ped{out}$ è sfasata di 180$^\circ$ e alzata di 5.9 V, valore che avrebbe dovuto essere di $\SI{5.5}{\volt}$.
+Il segnale in uscita ($V\ped{out}$) è amplificato di circa 10 volte rispetto al segnale in entrata.
+E` possibile anche notare il fenomeno del clipping, infatti $V\ped{out}$ non può superare i 10 V (linea tratteggiata) e non può scendere sotto 1 V più la tensione istantanea della base ($V\ped{in}$). Per questo motivo si vede che nella zona di clipping inferiore la d.d.p. non è costante ma segue il profilo della tensione in ingresso.
 
 \subsection*{Caratteristica in uscita del transistor BC107B}
 
-Per quanto riguarda lo studio del circuito in Figura \ref{fig:transistor} possiamo notare grazie al grafico riportato in Figura \ref{fig:cara} che l'andamento tipico della caratteristica in uscita di un transistor BC107B è rispettata. Tuttavia sono presenti alcune particolarità dovute alla verifica sperimentale delle leggi teoriche. Infatti si dicono caratteristiche di uscita quelle che esprimono la corrente di collettore $I_c$ in funzione della tensione $V\ped{ce}$, mantenendo costante la $I_b$.
-In base alle leggi teoriche si dovrebbe osservare che il ginocchio delle curve $I-V$ si trova sempre allo stesso valore di $V\ped{ce}$ magari con un leggero incremento per valori abbastanza elevati di $I_b$ (quindi superiori ai $\SI{70}{\micro\ampere}$), ma come possiamo osservare nel caso sperimentale non è rispettato. Probabilmente questo è dovuto al fatto che... bo io ho letto su internet ma non si capisce un cazzo!!!!!!!!!!
+Per quanto riguarda il circuito in Figura \ref{fig:transistor}, possiamo notare che il grafico riportato in Figura \ref{fig:cara} è un tipico grafico della caratteristica di un transistor BJP. 
+Dal grafico si distiguono la regione attiva, quella di saturazione e l'effetto Early. Abbiamo anche calcolato il
+guadagno in corrente del transistor, che è risultato fluttuare attorno a 460. Si può notare che il guadagno
+aumenta all'aumentare della corrente di base.

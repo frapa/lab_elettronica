@@ -1,0 +1,67 @@
+%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'circuito1.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{525.03325195bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.79648694)%
+    \put(0,0){\includegraphics[width=\unitlength]{circuito1.pdf}}%
+    \put(0.21248491,0.45234909){\makebox(0,0)[lb]{\smash{
+$Q_1$}}}%
+    \put(0.59092021,0.45016109){\makebox(0,0)[lb]{\smash{$Q_2$}}}%
+    \put(0.10013969,0.65847715){\makebox(0,0)[lb]{\smash{$R\ped{C}$}}}%
+    \put(0.59902285,0.65327645){\makebox(0,0)[lb]{\smash{$R\ped{C}$}}}%
+    \put(0.5297822,0.36400109){\makebox(0,0)[lb]{\smash{$R\ped{E}$}}}%
+    \put(0.27096085,0.36486787){\makebox(0,0)[lb]{\smash{$R\ped{E}$}}}%
+    \put(0.40875602,0.71935743){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$V\ped{CC}$}}}%
+    \put(0.02217002,0.49399339){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$V\ped{A}$}}}%
+    \put(0.77921691,0.48625052){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$V\ped{B}$}}}%
+    \put(0.83598572,0.59347151){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$V\ped{out}$}}}%
+    \put(0.45892556,0.12605385){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$-V\ped{EE}$}}}%
+    \put(0.35276306,0.20119449){\makebox(0,0)[lb]{\smash{$R\ped{1}$}}}%
+  \end{picture}%
+\endgroup%

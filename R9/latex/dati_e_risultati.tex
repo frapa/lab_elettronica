@@ -3,10 +3,15 @@
 \begin{SCfigure}[1][t!]
 	\centering
 	\includegraphics[width=0.72\textwidth]{current.pdf}
-	\caption{Il grafico illustra la corrente in funzione della resistenza del carico per il circuito
-	    \ref{fig:corr_cost}. Questo semplice circuito si comporta come una sorgente di corrente costante (1 mA)
-	    per resistenze di carico fino a circa \SI{8}{\kilo\ohm}. Dopo questa soglia la corrente inizia a diventare
-	    dipendente dal carico. Le incertezze non sono riportate in quanto non visibili sul grafico.}
+	\caption{Il circuito \ref{fig:corr_cost} si comporta come una sorgente di
+	    corrente costante (1 mA)
+	    per resistenze di carico fino a circa \SI{8}{\kilo\ohm}. Dopo questa soglia il transistor entra
+	    in saturazione, rendendo così impossibili ulteriori aumenti della d.d.p. ai capi del carico
+	    (diminuzioni di $V_c$).
+	    La legge riportata, basata su queste osservazioni,
+	     è I = 9.8 V / ($R_e$ + $R_L$) segue perfettamente
+	    l'andamento dei dati.
+	    Le incertezze sulla corrente sono state trascurate.}
 	\label{fig:curr}
 \end{SCfigure}
 
@@ -25,15 +30,25 @@ Non ci è rimasto che scegliere un valore grande per $R_1$ come $\SI{100}{\kilo\
 
 Infine abbiamo acquisito un grafico della corrente di collettore $I_c$ al variare della resistenza di carico $R_c$. I risultati ottenuti sono illustrati nel grafico in Figura \ref{fig:curr}.
 
+Dopo aver verificato che il circuito si comporta correttamente, abbiamo tentato di capire l'andamento
+della corrente nella regione dove essa non è costante. In questa regione il transistor entra in saturazione
+e quindi vale $V_c = V_e + 0.2 V$. Poichè $V_c$ non può più diminuire, la tensione ai capi del carico non può più
+aumentare e quindi, all'aumentare della resistenza, la corrente diminuisce.
+
+In realtà $V_c$ può abbassarsi ancora un poco, perchè la corrente diminuisce all'aumentare della resistenza,
+di conseguenza $V_e$ e $V_c$ si abbassano. Tuttavia questo effetto non basta a compensare l'aumento di
+resistenza del carico, e quindi la corrente diminuisce. Tenendo conto di questi fattori si ottiene la legge
+riportata nel grafico, che vale I = 9.8 V / ($R_e$ + $R_L$).
+
 \subsection*{Amplificatore ad emettitore comune}
 
-In questa sezione abbiamo montato e dimensionato il circuito in Figura \ref{fig:ampli}. I requisiti che deve avere il nostro circuito sono quelli di avere una tensione di collettore ($V_0$) di $\SI{10}{\volt}$, una corrente di quiescenza di circa $\SI{1}{\milli\ampere}$ e un guadagno $G$ di $-10$. Inoltre il circuito è alimentato da un segnale in ingresso ($V\ped{in}$) sinusodale di frequenza ($\nu$) $\SI{1}{\kilo\hertz}$.
+In questa sezione abbiamo montato e dimensionato il circuito in Figura \ref{fig:ampli}. I requisiti sono quelli di avere una tensione di collettore ($V_0$) di $\SI{10}{\volt}$, una corrente di quiescenza di circa $\SI{1}{\milli\ampere}$ e un guadagno $G$ di $-10$. Inoltre il circuito è alimentato da un segnale in ingresso ($V\ped{in}$) sinusodale di frequenza ($\nu$) $\SI{1}{\kilo\hertz}$.
 
 Noi sappiamo che in regime di quiescenza lungo il ramo collettore-emettitore scorre una corrente di $\SI{1}{\milli\ampere}$. Scegliendo $R_e = \SI{500}{\ohm}$ (questo valore ci permette poi di avere un guadagno $G = -10$), si ha $V_e = 0.5$ V e $V_b = V_e + 0.6 V  = 1.1$ V, quindi per ottenere un uscita con un clamping simmetrico (in modo che sia massimo l'intervallo per cui il segnale non viene tagliato) si deve avere, in quiescienza, $V\ped{out} = V_b + (V_0 - V_b)/2 \simeq 5.5$ V.
 Inoltre poichè vogliamo che il guadagno, definito come $G\,=\,-R_c/R_e$, sia di -10 possiamo ricavare grazie alle leggi di Ohm il valore di $R_c = \SI{5}{\kilo\ohm}$. In questo modo risulta che, in quiescienza, $V\ped{out} = 5$ V.
 
 Infine sfruttando le stesse considerazioni fatte nella sezione precedente otteniamo i valori di $R_1$ e $R_2$ che sono risultati essere $R_1=\SI{80}{\kilo\ohm}$ e $R_e=\SI{10}{\kilo\ohm}$.
-Infine abbiamo determinato il valore di capacità ($C$) sfruttando la relazione che lo lega alla frequenza di risonanza ($\nu$) del filtro passa-altro formato da $C$ e $R_1$ e $R_2$.
+Infine abbiamo determinato il valore di capacità $C$ sfruttando la relazione che lo lega alla frequenza di risonanza $\nu$ del filtro passa-altro formato da $C$, $R_1$ e $R_2$.
 
 \begin{equation}
 	C \,=\, \frac{1}{2\,\pi\,\nu\,R\ped{eq}} \qquad\text{da cui si ricava che:}\qquad C \,\simeq\,\SI{18}{\nano\farad}
@@ -61,11 +76,11 @@ In questa ultima sezione abbiamo montato il circuito riportato in Figura \ref{fi
 Quindi per studiare la caratteristica di uscita del transistor abbiamo utilizzato l'oscilloscopio e abbiamo acquisito tale caratteristica per differenti valori della corrente di base $I_b$ variando la tensione di base ($V_b$). In particolare siamo partiti da una corrente minima di base di $\SI{10}{\micro\ampere}$ fino ad arrivare ad una $I_b$ massima di $\SI{90}{\micro\ampere}$ a step di $\SI{10}{\micro\ampere}$.
 
 Il risultato ottenuto è riportato in Figura \ref{fig:cara}.
-Infine abbiamo calcolato per ciascun valore di $I_b$ il coefficiente di guadagno in corrente $\beta$ per il valore di tensione $V\ped{ce}=\SI{5}{\volt}$. Quindi sfruttando la relazione che lega $\beta$ con la corrente di collettore $I_c$ (nota) e la corrente di base $I_b$:
+Abbiamo calcolato per ciascun valore di $I_b$ il coefficiente di guadagno in corrente $\beta$ per il valore di tensione $V\ped{ce}=\SI{5}{\volt}$. Quindi sfruttando la relazione:
 
-\begin{SCfigure}[1][t!]
+\begin{figure}[t!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{transistor.pdf}
+	\includegraphics[width=0.75\textwidth]{transistor.pdf}
 	\caption{L'immagine illustra la caratteristica del nostro transistor BC107B. Dal grafico si vedono bene le aree
 	    tipiche di funzionamento di un transistor. La zona vicino all'asse delle ascisse è la regione di interdizione,
 	    poichè non essendoci corrente di base il transistor non conduce. La regione centrale è la regione attiva,
@@ -74,11 +89,12 @@ Infine abbiamo calcolato per ciascun valore di $I_b$ il coefficiente di guadagno
 	    dalla tensione $V_{ce}$.
 	    La zona vicina all'asse delle ordinate invece è la regione di saturazione del transistor,
 	    dove la tensione di base e di collettore non sono più correlate in modo semplice.
-	    Di solito un transistor
-	    viene utilizzato su una retta che taglia il grafico obliquamente passante per la regione
-	    di saturazione e quella di interdizione.}
+	    Di solito un transistor viene utilizzato su una retta che taglia il grafico obliquamente
+	    passante per la regione di saturazione e quella di interdizione. Nel grafico è anche visibile l'effetto Early
+	    ovvero il fatto che il guadagno in corrente del transistor varia con $V_{ce}$. Questo è visibile
+	    dalla non orrizzontalità delle linee nella regione attiva.}
 	\label{fig:cara}
-\end{SCfigure}
+\end{figure}
 
 \begin{equation}
 	\beta \,=\, \frac{I_c}{I_b}
@@ -86,8 +102,9 @@ Infine abbiamo calcolato per ciascun valore di $I_b$ il coefficiente di guadagno
 
 abbiamo ottenuto i risultati riportati in Tabella \ref{tab:tab}.
 
-\begin{table}[h]
+\begin{table}[b!]
     \centering
+    \footnotesize
     \[
     \begin{array}{l | c c c c c c c c c | c}
         \toprule
