@@ -49,7 +49,7 @@ Facendo l'analisi dei piccoli segnali si ottiene:
 Infine riportaiamo in figura \ref{fig:f3} uno screenshot dell'oscilloscopio che illustra un caso in cui la tensione in ingresso è troppo alta è
 si verifica il clamping.
 
-\begin{figure}
+\begin{figure}[t!]
     \begin{subfigure}[t]{0.48\textwidth}
         \includegraphics[width=\textwidth]{f1.png}
         \caption{Output dell'amplificatore differenziale con $V_A = 310$ mV (mostrato in figura in viola) e $V_B$ = 0 V.
@@ -77,11 +77,11 @@ si verifica il clamping.
         \includegraphics[width=\textwidth]{f4.png}
         \caption{Output dell'amplificatore differenziale migliorato in modo comune. La tensione picco-picco di ingresso
             è $V\ped{in} =$ \SI{300}{\milli\volt}. Si vede il netto miglioramento rispetto al circuito base (figura \ref{fig:f2}), in quanto l'uscita è praticamente costante,
-        come ci si aspetta fornendo la stessa tensione a entrambe le entrate.}
+            come ci si aspetta fornendo la stessa tensione a entrambe le entrate.}
         \label{fig:f4}
     \end{subfigure}
 
-    \caption{}
+    \caption{La figura raccoglie vari grafici delle tensioni in ingresso e in uscita dall'amplificatore, sia per il circuito semplice che per la sua correzione.}
     \label{fig:graphs}
 \end{figure}
 
@@ -90,7 +90,7 @@ si verifica il clamping.
 In questa seconda sezione vogliamo montare e studiare un amplificatore alle differenze con sorgente di corrente, figura \ref{fig:complesso}.
 Questo circuito è un miglioramento del precedente, che, introducendo una sorgente (in realtà un sink) di corrente costante, elimina quasi del tutto
 il guadagno in modo comune. Il guadagno in modo comune è evidentemente un difetto, poichè la differenza tra i due segnali è nulla, ma l'amplificatore
-da in uscita un segnale non costante. Questo miglioramento permette di aumentare di molto il fattore di qualita (CMRR) dell'amplificatore.
+da in uscita un segnale non costante. Questo miglioramento permette di aumentare di molto il fattore di qualità (CMRR) dell'amplificatore.
 
 Le caratteristiche di questo circuito sono le seguenti: la resistenza di collettore $R_C$ vale $\SI{10}{\kilo\ohm}$, le due resistenze di emettitore per i transistor Q1 e Q2 hanno lo stesso valore $R_E = \SI{120}{\ohm}$, mentre quelle della sorgente di corrente sono $R_1 = \SI{33}{\kilo\ohm}$, $R_2 = \SI{10}{\kilo\ohm}$ e $R_3 = \SI{1.5}{\kilo\ohm}$.
 Il circuito è alimentato a $\SI{+15}{\volt}$ e $\SI{-15}{\volt}$.
