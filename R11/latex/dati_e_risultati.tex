@@ -2,11 +2,7 @@
 
 \subsection*{Circuito invertente}
 
-<<<<<<< HEAD
-Il primo circuito studiato sfrutta l'opamp LM741 al fine di amplificare e sfasare di $180^\circ$ in ingresso ($V\ped{in}$). Il circuito che abbiamo realizzato è illustrato in Figura \ref{fig:amp_inv}.
-=======
-Il primo circuito studiato sfrutta l'op-amp 741 al fine di amplificare e sfasare di $180^\circ$ il segnale in ingresso ($V\ped{in}$). Il circuito che abbiamo realizzato è illustrato in Figura \ref{fig:}.
->>>>>>> 08435d3f7fd61609a3435fc1f63326822a6bb7b9
+Il primo circuito studiato sfrutta l'opamp LM741 al fine di amplificare e sfasare di $180^\circ$ il segnale in ingresso ($V\ped{in}$). Il circuito che abbiamo realizzato è illustrato in Figura \ref{fig:amp_inv}.
 Questo circuito è alimentato con una tensione costante positiva di $\SI{+15}{\volt}$ e una negativa di $\SI{-15}{\volt}$, un segnale in ingresso variabile ($V\ped{in}$) ottenuto grazie al generatore di onde.
 Dal momento che vogliamo che tale circuito abbia un guadagno ($G$) di circa 10 dobbiamo dimensionare il circuito. In particolare sapendo che per un circuito invertente vale la relazione:
 
@@ -23,11 +19,11 @@ Fatto questo abbiamo verificato che il guadagno di tale circuito, a frequenza fi
         G\,=\, XXX
 \end{equation}
 
-<<<<<<< HEAD
 Successivamente abbiamo deciso di studiare come varia il guadagno di tale circuito al variare della frequenza di $V\ped{in}$, mantenendo costante l'ampiezza di $V\ped{in}$. Quello che abbiamo ottenuto è riportato in Figura \ref{fig:g_vs_freq}
 
 \begin{figure}
     \includegraphics[width=0.75\textwidth]{amp_inv.pdf}
+    \label{fig:g_vs_frequenza}
 \end{figure}
 
 Infine abbiamo trovato i valori di ampiezza del segnale in uscita $V\ped{out}$, a frequenza costante $\nu\,=\,\SI{1}{\kilo\hertz}$ di $V\ped{in}$, per i quali si verifica il fenomeno del clamping. Tali valori sono risultati essere:
@@ -39,7 +35,7 @@ Infine abbiamo trovato i valori di ampiezza del segnale in uscita $V\ped{out}$, 
 \subsection*{Circuito non invertente}
 
 Questo circuito, come il precedente, sfrutta l'op-amp 471 al fine di ottenere un'amplificazione del segnale in ingresso $V\ped{in}$, ma in questo caso non è presente uno sfasamento di $180^\circ$ tra i due segnali ($V\ped{in}$ e $V\ped{out}$).
-Il circuito utilizzato è riportato in Figura \ref{fig:}. Le sue specifiche sono esattamente uguali a quelle del circuito descritto in precedenza a parte il fatto che le due resistenze $R_1$ e $R_2$ sono posizionate in punti differenti del circuito.
+Il circuito utilizzato è riportato in Figura \ref{fig:amp_noninv}. Le sue specifiche sono esattamente uguali a quelle del circuito descritto in precedenza a parte il fatto che le due resistenze $R_1$ e $R_2$ sono posizionate in punti differenti del circuito.
 Anche in questo caso abbiamo svolto delle misure di $V\ped{out}$ in funzione di $V\ped{in}$, mantenedo costante la frequenza $\nu\,=\,\SI{1}{\kilo\hertz}$ di $V\ped{in}$, e abbiamo ottenuto, grazie all'equazione (\ref{eq:g}), che:
 
 \begin{equation}
@@ -53,6 +49,8 @@ Infine, come nell'analisi dl circuito precedente, abbiamo trovato i valori di am
 \begin{equation}
         V\ped{out}^+\,\simeq\,\SI{}{\volt} \qquad \text{e} \qquad V\ped{out}^-\,\simeq\,\SI{}{\volt}
 \end{equation}
+
+\subsection*{Circuito sommatore}
 
 
 
