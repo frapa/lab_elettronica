@@ -2,7 +2,7 @@
 
 \subsection*{Circuito invertente}
 
-Il primo circuito studiato sfrutta l'op-amp 741 al fine di amplificare e sfasare di $180^\circ$ in ingresso ($V\ped{in}$). Il circuito che abbiamo realizzato è illustrato in Figura \ref{fig:}.
+Il primo circuito studiato sfrutta l'opamp LM741 al fine di amplificare e sfasare di $180^\circ$ in ingresso ($V\ped{in}$). Il circuito che abbiamo realizzato è illustrato in Figura \ref{fig:amp_inv}.
 Questo circuito è alimentato con una tensione costante positiva di $\SI{+15}{\volt}$ e una negativa di $\SI{-15}{\volt}$, un segnale in ingresso variabile ($V\ped{in}$) ottenuto grazie al generatore di onde.
 dal momento che vogliamo che tale circuito abbia un guadagno ($G$) di circa 10 dobbiamo dimensionare il circuito. In particolare sapendo che per un circuito invertente vale la relazione:
 
@@ -19,7 +19,11 @@ Fatto questo abbiamo verificato che il guadagno di tale circuito, a frequenza fi
         G\,=\, XXX
 \end{equation}
 
-Successivamente abbiamo deciso di studiare come varia il guadagno di tale circuito al variare della frequenza di $V\ped{in}$, mantenendo costante l'ampiezza di $V\ped{in}$. Quello che abbiamo ottenuto è riportato in Figura \ref{fig:}
+Successivamente abbiamo deciso di studiare come varia il guadagno di tale circuito al variare della frequenza di $V\ped{in}$, mantenendo costante l'ampiezza di $V\ped{in}$. Quello che abbiamo ottenuto è riportato in Figura \ref{fig:g_vs_freq}
+
+\begin{figure}
+    \includegraphics[width=0.75\textwidth]{amp_inv.pdf}
+\end{figure}
 
 Infine abbiamo trovato i valori di ampiezza del segnale in uscita $V\ped{out}$, a frequenza costante $\nu\,=\,\SI{1}{\kilo\hertz}$ di $V\ped{in}$, per i quali si verifica il fenomeno del clamping. Tali valori sono risultati essere:
 

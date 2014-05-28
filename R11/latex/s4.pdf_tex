@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 's1.pdf' (pdf, eps, ps)
+%% Accompanies image file 's4.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{456.71982422bp}%
+    \setlength{\unitlength}{414.36293945bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,15 +48,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.54753699)%
-    \put(0,0){\includegraphics[width=\unitlength]{s1.pdf}}%
-    \put(0.1008313,0.50309188){\makebox(0,0)[lb]{\smash{\SI{10}{\kilo\ohm}}}}%
-    \put(0.55851761,0.50206131){\makebox(0,0)[lb]{\smash{\SI{10}{\kilo\ohm}}}}%
-    \put(0.0115973,0.40689728){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$V_1$}}}%
-    \put(0.01264424,0.08751173){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$V_2$}}}%
-    \put(0.62010563,0.3689887){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{+15 V}}}%
-    \put(0.62866094,0.12694475){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{-15 V}}}%
-    \put(0.09869325,0.18800786){\makebox(0,0)[lb]{\smash{\SI{10}{\kilo\ohm}}}}%
-    \put(0.90392617,0.20008969){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$V\ped{out}$}}}%
+  \begin{picture}(1,0.61262253)%
+    \put(0,0){\includegraphics[width=\unitlength]{s4.pdf}}%
+    \put(0.10706423,0.29128146){\makebox(0,0)[lb]{\smash{$R_1$ = \SI{10}{\kilo\ohm}}}}%
+    \put(0.44652198,0.55950484){\makebox(0,0)[lb]{\smash{$R_2$ = \SI{100}{\kilo\ohm}}}}%
+    \put(0.02809132,0.20657989){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$V\ped{in}$}}}%
+    \put(0.79217997,0.17361159){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$V\ped{out}$}}}%
+    \put(0.54038278,0.3262451){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{+15 V}}}%
+    \put(0.54650634,0.10152262){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{-15 V}}}%
+    \put(0.45072623,0.45686766){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{C =  \SI{100}{\nano\farad}}}}%
   \end{picture}%
 \endgroup%

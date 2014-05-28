@@ -2,10 +2,49 @@
 
 \begin{itemize}
     \item{Breadboard, cavetti e cavi a banana per le connessioni;}
-    \item{Amplificatore operazionale 741 a 8 pin;}
-    \item{Resistenze e capacità varie;}
+    \item{Amplificatore operazionale LM741 a 8 pin;}
+    \item{Resistenze da \SI{10}{\kilo\ohm},\SI{100}{\kilo\ohm}, \SI{2.2}{\mega\ohm} e capacità da
+        \SI{100}{\nano\farad};}
     \item{Generatore di funzioni d'onda Agilent 33120A e alimentatore $\pm$ 25 V Agilent E3631A;}
     \item{Oscilloscopio Agilent DSO-X 2002A}
 \end{itemize}
 
-\section*{Circuito}
+\section*{Circuiti}
+
+\begin{figure}[h!]
+    \small
+    \centering
+    \begin{subfigure}[t]{0.32\textwidth}
+        \def\svgwidth{\columnwidth}
+        \input{s2.pdf_tex}
+        \caption{Amplificatore invertente}
+        \label{fig:amp_inv}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.32\textwidth}
+        \def\svgwidth{\columnwidth}
+        \input{s3.pdf_tex}
+        \caption{Amplificatore non invertente}
+        \label{fig:amp_noninv}
+    \end{subfigure}
+    \vspace{3mm}
+    \begin{subfigure}[t]{0.32\textwidth}
+        \def\svgwidth{\columnwidth}
+        \input{s1.pdf_tex}
+        \caption{Sommatore}
+        \label{fig:sum}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.4\textwidth}
+        \def\svgwidth{\columnwidth}
+        \input{s4.pdf_tex}
+        \caption{Integratore}
+        \label{fig:int}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.4\textwidth}
+        \def\svgwidth{\columnwidth}
+        \input{s5.pdf_tex}
+        \caption{Differenziatore}
+        \label{fig:diff}
+    \end{subfigure}
+    \caption{Circuiti}
+    \label{fig:circuiti}
+\end{figure}
