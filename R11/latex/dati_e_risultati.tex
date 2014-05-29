@@ -12,7 +12,7 @@ Dal momento che vogliamo che tale circuito abbia un guadagno ($G$) di circa 10 d
         \label{eq:g}
 \end{equation}
 %
-dove $R_1$ e $R_2$ sono le resistenze del circuito in analisi, $V\ped{in}$ il segnale in ingresso e $V\ped{out}$ il segnale in uscita. Quindi, per non avere intensità di correnti troppo elevate all'interno del circuito, abbiamo deciso di porre $R_2\,=\,\SI{100}{\kilo\ohm}$ e $R_1\,=\,\SI{10}{\kilo\ohm}$.
+dove $R_1$ e $R_2$ sono le resistenze del circuito in analisi, $V\ped{in}$ il segnale in ingresso e $V\ped{out}$ il segnale in uscita. Quindi, per non avere correnti troppo elevate all'interno del circuito, abbiamo deciso di porre $R_2\,=\,\SI{100}{\kilo\ohm}$ e $R_1\,=\,\SI{10}{\kilo\ohm}$.
 
 Fatto questo abbiamo verificato che il guadagno di tale circuito, a frequenza fissta $\nu\,=\,\SI{1}{\kilo\hertz}$, fosse costante. A tal fine abbiamo misurato $V\ped{out}$ al variare dell'ampiezza del segnale in ingresso $V\ped{in}$. Pertanto sfruttando la relazione (\ref{eq:g}) abbiamo fatto la media dei valori di $G$ così ricavati e abbiamo ottenuto che il guadagno del nostro circuito vale:
 
@@ -57,7 +57,7 @@ Infine, come nell'analisi dl circuito precedente, abbiamo trovato i valori di am
 
 \subsection*{Circuito sommatore}
 
-Come passo successivo abbiamo utilizzato in nostro amplificatore operazionale per realizzare un circuito sommatore, rappresentato in Figura \ref{fig:sum}. Questo circuito ha la peculiarità di ricevere in ingresso più segnali $V_i$ e di restituire in output la loro somma pesata sui relativi valori di $R_i$. Ovvero in formule io avrei:
+Come passo successivo abbiamo utilizzato il nostro amplificatore operazionale per realizzare un circuito sommatore, rappresentato in Figura \ref{fig:sum}. Questo circuito ha la peculiarità di ricevere in ingresso più segnali $V_i$ e di restituire in output la loro somma pesata sui relativi valori di $R_i$. Ovvero in formule io avrei:
 
 \begin{equation}
         V\ped{out}\,=\,\sum_{i=1}^{n}{\frac{R}{R_i} \cdot V_i}
@@ -81,24 +81,22 @@ Lo scopo di questo circuito, idealmente, è quello di fornire un un segnale in u
         V\ped{out}\,=\,-\frac{1}{R_1C} \int_{t}{V\ped{in}dt}\,+\,c
 \end{equation}
 %
-dove $R_1$ e $C$ indichiamo rispettivamente la resistenza 1 e la capacità del circuito di feedback, $c$ è la costante di integrazione, e $V\ped{in}$ è il segnale in ingresso che è funzione del tempo. 
+dove $R_1$ e $C$ indichiamo rispettivamente la resistenza 1 e la capacità del circuito di feedback, $c$ è la costante di integrazione, e $V\ped{in}$ è il segnale in ingresso che è funzione del tempo.
 
-
+Di questo circuito ne abbiamo verificato il corretto funzionamento acquisendo, grazie all'oscilloscopio, il segnale in uscita $V\ped{out}$ per varie forme d'onda in ingresso, generate dal generatore d'onda. I risultati ottenuti sono riportati in Figura \ref{fig:}.
 
 \subsection*{Circuito derivatore}
 
+Per finire abbiamo montato un circuito derivatore, illustrato in Figura \ref{fig:diff}.
 
+Le specifiche di tale circuito sono riportate in Figura \ref{fig:diff}, tuttavia facciamo notare che in ingresso ($V\ped{in}$) è stato applicato un segnale variable nel tempo sfruttando il generatore di onde.
 
+Lo scopo di queto circuito è quello di fornire in output un segnale ($V\ped{out}$) che è la derivata temporale del segnale in ingresso ($V\ped{in}$). In formule si dovrebbe ottenere che, se il circuito fosse ideale:
 
+\begin{equation}
+        V\ped{out}\,=\,-R_1C \cdot \frac{dV\ped{in}}{dt}
+\end{equation}
+%
+dove con $R_1$ indichiamo la resistenza in serie al condensatore $C$ e $V\ped{in}$ è il segnale in ingresso al circuito.
 
-
-
-
-
-
-
-
-
-
-
-
+Anche per questo circuito abbiamo voluto verificarne il corretto funzionamento, sfruttando l'oscilloscopio, osservando che $V\ped{out}$ sia effettivamente la derivata del segnale in ingresso $V\ped{in}$. Questo è stato fatto per varie forme d'onda in ingresso al circuito. I risultati ottenuti sono illustrati in Figura \ref{fig:}
