@@ -116,7 +116,7 @@ def g_ninv_519mv(g=True):
     ax.errorbar(x=unumpy.nominal_values(freq),
         y=unumpy.nominal_values(Gs),
         c='black', fmt='o-')
-
+    
     ax.set_xlabel('Frequenza', fontsize=14)
     ax.set_ylabel('Guadagno G', fontsize=14)
 
@@ -157,6 +157,70 @@ def g_ninv_519mv(g=True):
     plt.show()
 
 g_1000hz()
-g_515mv()
+g_515mv(False)
 g_ninv_1000hz()
-g_ninv_519mv()
+g_ninv_519mv(False)
+
+def other(g=True):
+    freq = unumpy.uarray([100, 500, 1000, 5000, 10000, 50000], np.array([100, 500, 1000, 5000, 10000, 50000]) * 0.01)
+    vin = ufloat(1.01, 0.01)
+    vout = unumpy.uarray([0.640, 3.02, 5.27, 9.2, 9.6, 6.4], [0.01, 0.01, 0.01, 0.1, 0.1, 0.1])
+    fase = unumpy.uarray([92, 108, 123, 166, 178, -125], [1, 2, 1, 1, 1, 1])
+
+    Gs = vout / vin
+    dB = 10 * unumpy.log10(Gs)
+
+    if not g:
+        return None
+
+    f = plt.figure(figsize=(8, 8))
+    f.suptitle("Differenziatore", fontsize=15, y=0.98)
+    
+    ax = f.add_subplot(211)
+
+    ax.errorbar(x=unumpy.nominal_values(freq),
+        y=unumpy.nominal_values(Gs),
+        c='black', fmt='o-')
+
+    ax.set_xlabel('Frequenza', fontsize=14)
+    ax.set_ylabel('Guadagno G', fontsize=14)
+
+    ax.set_xscale('log')
+    #ax.set_ylim((-13, 1))
+    #ax.set_yticklabels(('', 2, 4, 6, 8, 10, 12))
+    ax.set_xticklabels(('', '100 Hz', u"1 kHz", u"10 kHz", u"100 kHz", u"1 MHz"))
+    
+    ax.minorticks_on()
+    ax.grid(b=True, which='major', color='0.7', linestyle='-', zorder=-5)
+    ax.grid(b=True, which='minor', color='0.9', linestyle='-', zorder=-9)
+    ax.set_axisbelow(True)
+    
+    ax2 = f.add_subplot(212)
+
+    ax2.errorbar(x=unumpy.nominal_values(freq),
+        y=unumpy.nominal_values(fase),
+        c='black', fmt='o-')
+
+    ax2.set_ylabel('Sfasamento [Gradi]', fontsize=14)
+
+    ax2.set_xscale('log')
+    #ax2.set_yticklabels(('', 25, 50, 75, 100))
+    ax2.set_xticklabels(('', '100 Hz', u"1 kHz", u"10 kHz", u"100 kHz"))
+    
+    ax2.minorticks_on()
+    ax2.grid(b=True, which='major', color='0.7', linestyle='-', zorder=-5)
+    ax2.grid(b=True, which='minor', color='0.9', linestyle='-', zorder=-9)
+    ax2.set_axisbelow(True)
+
+    ax3 = ax2.twiny()
+    ax3.set_xticks((0, 0.333, 0.666, 1))
+    ax3.set_xticklabels(('', "1 kHz", u"10 kHz", u"100 kHz"))
+
+    f.subplots_adjust(top=0.93, hspace=0.25, bottom=0.07, right=0.95)
+
+    plt.savefig("../latex/diff.pdf")
+
+    plt.show()
+
+
+other()
